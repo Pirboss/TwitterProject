@@ -1,0 +1,35 @@
+Questions
+faut-il collecter les tweets avant le démarrage de l'application ou en direct lors de l'éxecution de l'application ?
+les tweets doivent-ils être conservés d'un lancement d'application au suivant
+
+
+Decisions
+on fait en Java
+
+
+Trucs à faire
+interface graphique(voir librairies a importer)
+stockage(voir les technos)
+librairie twitter4j(explorer et tester)
+
+
+Code d acces twitter/hotmail/twitterDevs
+teamvaps@outlook.com
+bonjour123
+
+
+API Twitter
+Consumer Key (API Key) lB6Xfz91V3sPdtxMno5UUXmVk
+Consumer Secret (API Secret) rn9pNKnj9Ky70kwtgqoXV1IoVent8GjNhYnL6pdDL0e2sew1Dk
+Access Level Read and write (modify app permissions)
+Owner team_vaps
+Owner ID 822018210178469888 
+
+
+code recuperer tweets vieux de plus de 7j
+https://github.com/Jefferson-Henrique/GetOldTweets-python
+
+librairies jar a ajouter
+http://twitter4j.org/en/index.html
+https://hc.apache.org/downloads.cgi
+https://github.com/Jefferson-Henrique/GetOldTweets-java  >>> prendre le got.jar
