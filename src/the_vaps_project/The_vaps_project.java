@@ -66,15 +66,17 @@ public class The_vaps_project {
                 .setUntil("2016-11-08")
                 .setQuerySearch("#NeverTrump");
         Scribe s = new Scribe();
+        s.ouvrir("swag.txt");
         for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
             t = TweetManager.getTweets(criteria).get(i);
-            s.ecrire("swag.txt", t.getText()+"\n");
+            s.ecrire(t.getText()+"\n");
             /*System.out.println(USERNAME + t.getUsername());
             System.out.println(TEXT + t.getText());
             System.out.println(HASHTAGS + t.getHashtags());
             System.out.println(DATE + t.getDate());
             System.out.println();*/
         }
+        s.fermer();
     }
 
     
