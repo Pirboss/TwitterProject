@@ -1,4 +1,4 @@
-Questions
+﻿Questions
 faut-il collecter les tweets avant le démarrage de l'application ou en direct lors de l'éxecution de l'application ?
 les tweets doivent-ils être conservés d'un lancement d'application au suivant
 
@@ -33,3 +33,4 @@ librairies jar a ajouter
 http://twitter4j.org/en/index.html
 https://hc.apache.org/downloads.cgi
 https://github.com/Jefferson-Henrique/GetOldTweets-java  >>> prendre le got.jar
+https://github.com/Jefferson-Henrique/GetOldTweets-java/tree/master/libs >> prendre json et jsoup
