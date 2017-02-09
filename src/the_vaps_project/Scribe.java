@@ -6,6 +6,7 @@
 package the_vaps_project;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -29,6 +30,20 @@ public class Scribe {
             System.out.print("Erreur : ");
             ioe.printStackTrace();
         }
+    }
+    
+    public void detruireFichier(String fileName){
+        String adressedufichier = System.getProperty("user.dir") + "/" + fileName;
+        try{
+            File file = new File(adressedufichier);
+            if(file.delete()){
+                System.out.println(file.getName() + " supprimé");
+            }else{
+                System.out.println("Echec de la suppression de "+file.getName());
+            }
+    	}catch(Exception e){
+            e.printStackTrace();
+    	}
     }
 
     public void fermer() {

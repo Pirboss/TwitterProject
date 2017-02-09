@@ -63,6 +63,7 @@ public class The_vaps_project {
                 //.setUntil("2016-11-08")
                 .setQuerySearch("#test123456789");
         Scribe s = new Scribe();
+        s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
         s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         s.ecrire("<tweets>\n");
