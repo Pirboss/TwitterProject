@@ -1,3 +1,6 @@
 /nbproject/private/
 /build/
 /dist/
+/*.txt
+/tweets.xml
+/nbproject/project.properties
