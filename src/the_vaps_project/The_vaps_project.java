@@ -66,16 +66,25 @@ public class The_vaps_project {
                 .setUntil("2016-11-08")
                 .setQuerySearch("#NeverTrump");
         Scribe s = new Scribe();
-        s.ouvrir("swag.txt");
+        s.ouvrir("tweets.xml");
+        s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        s.ecrire("<tweets>\n");
         for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
             t = TweetManager.getTweets(criteria).get(i);
-            s.ecrire(t.getText()+"\n");
-            /*System.out.println(USERNAME + t.getUsername());
-            System.out.println(TEXT + t.getText());
-            System.out.println(HASHTAGS + t.getHashtags());
-            System.out.println(DATE + t.getDate());
-            System.out.println();*/
+            s.ecrire("\t<tweet>\n");
+            s.ecrire("\t\t<text>"+t.getText()+"</text>\n");
+            s.ecrire("\t\t<hashtags>"+t.getHashtags()+"</hashtags>\n");
+            s.ecrire("\t\t<date>"+t.getDate()+"</date>\n");
+            s.ecrire("\t\t<username>"+t.getUsername()+"</username>\n");
+            s.ecrire("\t\t<retweets>"+t.getRetweets()+"</retweets>\n");
+            s.ecrire("\t\t<favorites>"+t.getFavorites()+"</favorites>\n");
+            s.ecrire("\t\t<id>"+t.getId()+"</id>\n");
+            s.ecrire("\t\t<geo>"+t.getGeo()+"</geo>\n");
+            s.ecrire("\t\t<mentions>"+t.getMentions()+"</mentions>\n");
+            s.ecrire("\t\t<permalink>"+t.getPermalink()+"</permalink>\n");
+            s.ecrire("\t</tweet>\n");
         }
+        s.ecrire("</tweets>");
         s.fermer();
     }
 
