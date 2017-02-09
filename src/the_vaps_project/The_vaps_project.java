@@ -5,10 +5,7 @@
  */
 package the_vaps_project;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.List;
+
 import me.jhenrique.manager.TweetManager;
 import me.jhenrique.manager.TwitterCriteria;
 import me.jhenrique.model.Tweet;
@@ -62,9 +59,9 @@ public class The_vaps_project {
         TwitterCriteria criteria = null;
         Tweet t = null;
         criteria = TwitterCriteria.create()
-                .setMaxTweets(50)
-                .setUntil("2016-11-08")
-                .setQuerySearch("#NeverTrump");
+                .setMaxTweets(5)
+                //.setUntil("2016-11-08")
+                .setQuerySearch("#test123456789");
         Scribe s = new Scribe();
         s.ouvrir("tweets.xml");
         s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
@@ -82,6 +79,7 @@ public class The_vaps_project {
             s.ecrire("\t\t<geo>"+t.getGeo()+"</geo>\n");
             s.ecrire("\t\t<mentions>"+t.getMentions()+"</mentions>\n");
             s.ecrire("\t\t<permalink>"+t.getPermalink()+"</permalink>\n");
+            s.ecrire("\t\t<smileys>"+t.getSmileys()+"</smileys>\n");
             s.ecrire("\t</tweet>\n");
         }
         s.ecrire("</tweets>");
