@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  */
 public class TopicModel {
     
-    public static List<String> getTopics(String filepath) {
+    public static List<String> getTopics(String filepath, int nTopics, int nWords) {
         List<String> output = new ArrayList<>();
         
         // Begin by importing documents from text to feature sequences
@@ -52,7 +52,7 @@ public class TopicModel {
         // Create a model with 100 topics, alpha_t = 0.01, beta_w = 0.01
         //  Note that the first parameter is passed as the sum over topics, while
         //  the second is the parameter for a single dimension of the Dirichlet prior.
-        int numTopics = 100;
+        int numTopics = nTopics;
         ParallelTopicModel model = new ParallelTopicModel(numTopics, 1.0, 0.01);
 
         model.addInstances(instances);
@@ -118,7 +118,7 @@ public class TopicModel {
             out = new Formatter(new StringBuilder(), Locale.US);
             out.format("%d\t%.3f\t", topic, topicDistribution[topic]);
             int rank = 0;
-            while (iterator.hasNext() && rank < 10) {
+            while (iterator.hasNext() && rank < nWords) {
                 IDSorter idCountPair = iterator.next();
                 out.format("%s (%.0f) ", dataAlphabet.lookupObject(idCountPair.getID()), idCountPair.getWeight());
                 rank++;
@@ -130,7 +130,7 @@ public class TopicModel {
     }
     
     public static void main(String args[]) throws IOException {
-        getTopics("src/resources/sample.txt");
+        getTopics("src/resources/sample.txt", 100, 10);
     }
     
 }
