@@ -6,6 +6,7 @@
 package the_vaps_project;
 
 
+import gephi.PreviewJFrame;
 import me.jhenrique.manager.TweetManager;
 import me.jhenrique.manager.TwitterCriteria;
 import me.jhenrique.model.Tweet;
@@ -59,10 +60,10 @@ public class The_vaps_project {
         TwitterCriteria criteria = null;
         Tweet t = null;
         criteria = TwitterCriteria.create()
-                .setMaxTweets(5)
+                .setMaxTweets(10)
                 //.setUntil("2016-11-08")
                 .setQuerySearch("#test123456789");
-        Scribe s = new Scribe();
+        /*Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
         s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
@@ -84,7 +85,31 @@ public class The_vaps_project {
             s.ecrire("\t</tweet>\n");
         }
         s.ecrire("</tweets>");
+        s.fermer();*/
+        
+        
+        Scribe s = new Scribe();
+        s.detruireFichier("tweets.gexf");
+        s.ouvrir("tweets.gexf");
+        s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        s.ecrire("<gexf xmlns=\"http://www.gexf.net/1.3\" version=\"1.3\" xmlns:viz=\"http://www.gexf.net/1.3/viz\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd\">\n");
+        s.ecrire("\t<meta lastmodifieddate=\"2017-02-17\">\n");
+        s.ecrire("\t\t<creator>Pirboss</creator>\n");
+        s.ecrire("\t\t<description>Test v1</description>\n");
+        s.ecrire("\t</meta>\n");
+        s.ecrire("\t<graph defaultedgetype=\"directed\" mode=\"static\">\n");
+        s.ecrire("\t\t<nodes>\n");
+        for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
+            t = TweetManager.getTweets(criteria).get(i);
+            s.ecrire("\t\t\t<node id=\""+i+"\" label=\""+t.getUsername()+"\" mentions=\""+t.getMentions()+"\"/>\n");
+        }
+        s.ecrire("\t\t</nodes>\n");
+        s.ecrire("\t</graph>\n");
+        s.ecrire("</gexf>");
         s.fermer();
+        
+        PreviewJFrame p = new PreviewJFrame();
+        p.script();
     }
 
     
