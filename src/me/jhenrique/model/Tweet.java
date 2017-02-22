@@ -4,123 +4,143 @@ import java.util.Date;
 
 /**
  * Model class to helps users getting info about an specific tweet
- * 
+ *
  * @author Jefferson
  */
 public class Tweet {
-	
-	private String id;
-	
-	private String permalink;
-	
-	private String username;
-	
-	private String text;
-	
-	private Date date;
-	
-	private int retweets;
 
-	private int favorites;
-	
-	private String mentions;
-	
-	private String hashtags;
-	
-	private String geo;
-        
-        private int smileys;
-        
-        public int getSmileys() {
-            return smileys;
+    private String id;
+
+    private String permalink;
+
+    private String username;
+
+    private String text;
+
+    private Date date;
+
+    private int retweets;
+
+    private int favorites;
+
+    private String mentions;
+
+    private String hashtags;
+
+    private String geo;
+
+    private String smileys;
+    private int polarite;
+
+    public int getPolarite() {
+        return polarite;
+    }
+
+    public void setPolarite(int polarite) {
+        if (polarite > 1) {
+            this.polarite = 1;
+        } else if (polarite < -1) {
+            this.polarite = -1;
+        } else {
+            this.polarite = 0;
         }
-        
+    }
 
-        public void setSmileys(int smileys) {
-            this.smileys = smileys;
-        }
-	
-	public Tweet() {
-	}
+//        public int getSmileys() {
+//            return smileys;
+//        }
+    public String getSmileys() {
+        return smileys;
+    }
 
-	public String getId() {
-		return id;
-	}
+//        public void setSmileys(int smileys) {
+//            this.smileys = smileys;
+//        }
+    public void setSmileys(String smileys) {
+        this.smileys = smileys;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public Tweet() {
+    }
 
-	public String getPermalink() {
-		return permalink;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setPermalink(String permalink) {
-		this.permalink = permalink;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getUsername() {
-		return username;
-	}
+    public String getPermalink() {
+        return permalink;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public void setPermalink(String permalink) {
+        this.permalink = permalink;
+    }
 
-	public String getText() {
-		return text;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public void setText(String text) {
-		this.text = text;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public Date getDate() {
-		return date;
-	}
+    public String getText() {
+        return text;
+    }
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	public int getRetweets() {
-		return retweets;
-	}
+    public Date getDate() {
+        return date;
+    }
 
-	public void setRetweets(int retweets) {
-		this.retweets = retweets;
-	}
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
-	public int getFavorites() {
-		return favorites;
-	}
+    public int getRetweets() {
+        return retweets;
+    }
 
-	public void setFavorites(int favorites) {
-		this.favorites = favorites;
-	}
-	
-	public String getMentions() {
-		return mentions;
-	}
+    public void setRetweets(int retweets) {
+        this.retweets = retweets;
+    }
 
-	public void setMentions(String mentions) {
-		this.mentions = mentions;
-	}
-	
-	public String getHashtags() {
-		return hashtags;
-	}
+    public int getFavorites() {
+        return favorites;
+    }
 
-	public void setHashtags(String hashtags) {
-		this.hashtags = hashtags;
-	}
+    public void setFavorites(int favorites) {
+        this.favorites = favorites;
+    }
 
-	public String getGeo() {
-		return geo;
-	}
+    public String getMentions() {
+        return mentions;
+    }
 
-	public void setGeo(String geo) {
-		this.geo = geo;
-	}
-	
+    public void setMentions(String mentions) {
+        this.mentions = mentions;
+    }
+
+    public String getHashtags() {
+        return hashtags;
+    }
+
+    public void setHashtags(String hashtags) {
+        this.hashtags = hashtags;
+    }
+
+    public String getGeo() {
+        return geo;
+    }
+
+    public void setGeo(String geo) {
+        this.geo = geo;
+    }
+
 }
