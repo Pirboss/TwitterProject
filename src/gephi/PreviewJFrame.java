@@ -66,14 +66,15 @@ public class PreviewJFrame {
         PreviewController previewController = Lookup.getDefault().lookup(PreviewController.class);
         PreviewModel previewModel = previewController.getModel();
         previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.TRUE);
-        previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.WHITE));
+        previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.BLUE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
-        previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
-        previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.GRAY);
+        previewModel.getProperties().putValue(PreviewProperty.EDGE_RESCALE_WEIGHT, Boolean.TRUE);
+        //previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
+        //previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.YELLOW);
         //previewModel.getProperties().putValue(PreviewProperty.SHOW_EDGES, Boolean.TRUE);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_COLOR, Color.RED);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_LABEL_COLOR, Color.RED);
-        previewModel.getProperties().putValue(PreviewProperty.EDGE_THICKNESS, 3);
+        //previewModel.getProperties().putValue(PreviewProperty.EDGE_THICKNESS, 3);
         //New Processing target, get the PApplet
         G2DTarget target = (G2DTarget) previewController.getRenderTarget(RenderTarget.G2D_TARGET);
         final PreviewSketch previewSketch = new PreviewSketch(target);

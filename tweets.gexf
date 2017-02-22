@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+<gexf xmlns="http://www.gexf.net/1.3draft" version="1.3" xmlns:viz="http://www.gexf.net/1.3draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
 	<meta lastmodifieddate="2017-02-17">
 		<creator>Pirboss</creator>
 		<description>Test v1</description>
 	</meta>
 	<graph defaultedgetype="directed" mode="static">
 		<nodes>
-			<node id="0" label="team_vaps" mentions="@LaTourEiffel"/>
-			<node id="1" label="team_vaps" mentions="@team_vaps @Everyone"/>
-			<node id="2" label="team_vaps" mentions=""/>
-			<node id="3" label="team_vaps" mentions=""/>
-			<node id="4" label="team_vaps" mentions=""/>
-			<node id="5" label="Test02380725" mentions=""/>
-			<node id="6" label="Test02380725" mentions=""/>
-			<node id="7" label="ganzo_thebest" mentions=""/>
-			<node id="8" label="ganzo_thebest" mentions=""/>
-			<node id="9" label="ganzo_thebest" mentions=""/>
+			<node id="0" label="ganzo_thebest"/>
+			<node id="1" label="Everyone"/>
+			<node id="2" label="Test02380725"/>
+			<node id="3" label="team_vaps"/>
+			<node id="4" label="LaTourEiffel"/>
+			<node id="5" label="france"/>
 		</nodes>
+		<edges>
+			<edge id="0" source="3" target="5">
+				<viz:thickness value="2.0"/>
+			</edge>
+			<edge id="1" source="3" target="3">
+				<viz:thickness value="2.0"/>
+			</edge>
+			<edge id="2" source="3" target="4">
+				<viz:thickness value="1.0"/>
+			</edge>
+			<edge id="3" source="3" target="1">
+				<viz:thickness value="1.0"/>
+			</edge>
+		</edges>
 	</graph>
 </gexf>
