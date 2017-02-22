@@ -159,7 +159,7 @@ public class TopicsGenerator {
     }
     
     public static void main(String args[]) throws IOException {
-        for (Topic topic : getTopics(CorpusReader.getCorpus("src/resources/sample.txt"), 100, 10)) {
+        for (Topic topic : getTopics(CorpusReader.getCorpusLemmatized("src/resources/sample.txt"), 100, 10)) {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
     }

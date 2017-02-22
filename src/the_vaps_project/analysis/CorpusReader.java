@@ -24,7 +24,19 @@ public class CorpusReader {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(CorpusReader.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return corpus;
-                
+        return corpus;     
+    }
+    
+    public static Reader getCorpusLemmatized(String source) {
+        String cmd = "python src/lemmatizer/preprocessing.py lemmatized";
+        
+        try {
+            Runtime.getRuntime().exec(cmd).waitFor();
+        } catch (IOException ex) {
+            Logger.getLogger(CorpusReader.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(CorpusReader.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return getCorpus("src/resources/sampleLem.txt");
     }
 }
