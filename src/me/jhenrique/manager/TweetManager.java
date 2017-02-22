@@ -1,9 +1,14 @@
 package me.jhenrique.manager;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStream;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
@@ -16,11 +21,13 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import the_vaps_project.emojis.Emoji;
 
 /**
  * Class to getting tweets based on username and optional time constraints
@@ -81,20 +88,39 @@ public class TweetManager {
 				refreshCursor = json.getString("min_position");
 				Document doc = Jsoup.parse((String) json.get("items_html"));
 				Elements tweets = doc.select("div.js-stream-tweet");
+                                // @TODO : GESTION EMOJI
+                                String adresseEmojiJSON = System.getProperty("user.dir") + "/src/the_vaps_project/emojis.json";
+                                BufferedReader bfrEmojiJSON = new BufferedReader(new FileReader(adresseEmojiJSON));
+                                String bufferedEmoji = new String();
+                                String line;
+                                while ((line = bfrEmojiJSON.readLine()) != null) {
+                                    bufferedEmoji += line;
+                                }
+                                bfrEmojiJSON.close();
+                                JSONArray emojiJSON = new JSONArray(bufferedEmoji);
+                                List<Emoji> emojis = new ArrayList<>(emojiJSON.length());
+                                for (int i = 0; i < emojiJSON.length(); i++) {
+                                    Emoji emoji = new Emoji(emojiJSON.getJSONObject(i).getString("emoji"), emojiJSON.getJSONObject(i).getString("description"), emojiJSON.getJSONObject(i).getInt("note"));
+                                    emojis.add(emoji);
+                                }
+                                // FIN GESTION EMOJI
 				
 				if (tweets.size() == 0) {
 					break;
 				}
 			
 				for (Element tweet : tweets) {
-                                        int smileys = 0;
+                                        int note = 0;
+                                        String smileys = "";
 					String usernameTweet = tweet.select("span.username.js-action-profile-name b").text();
                                         String txt = tweet.select("p.js-tweet-text").text().replaceAll("[^\\u0000-\\uFFFF]", "");
                                         for (Element s : tweet.select("img.Emoji"))
                                         {
-                                            
-                                            smileys ++;
-                                            //= "/" + s.attr("title").toString();
+                                            smileys = smileys + " " + s.attr("alt");
+                                            Emoji smiley = new Emoji(s.attr("alt"));
+                                            int index = emojis.indexOf(smiley);
+                                            if(index != -1)
+                                                note += emojis.get(index).getPolarity();
                                         }
 					int retweets = Integer.valueOf(tweet.select("span.ProfileTweet-action--retweet span.ProfileTweet-actionCount").attr("data-tweet-stat-count").replaceAll(",", ""));
 					int favorites = Integer.valueOf(tweet.select("span.ProfileTweet-action--favorite span.ProfileTweet-actionCount").attr("data-tweet-stat-count").replaceAll(",", ""));
@@ -122,6 +148,7 @@ public class TweetManager {
 					t.setMentions(processTerms("(@\\w*)", txt));
 					t.setHashtags(processTerms("(#\\w*)", txt));
 					t.setGeo(geo);
+                                        t.setPolarite(note);
 					
 					results.add(t);
 					

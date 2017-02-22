@@ -81,6 +81,7 @@ public class The_vaps_project {
             s.ecrire("\t\t<mentions>"+t.getMentions()+"</mentions>\n");
             s.ecrire("\t\t<permalink>"+t.getPermalink()+"</permalink>\n");
             s.ecrire("\t\t<smileys>"+t.getSmileys()+"</smileys>\n");
+            s.ecrire("\t\t<polarite>"+t.getPolarite()+"</polarite>\n");
             s.ecrire("\t</tweet>\n");
         }
         s.ecrire("</tweets>");
