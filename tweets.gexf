@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gexf xmlns="http://www.gexf.net/1.3draft" version="1.3" xmlns:viz="http://www.gexf.net/1.3draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
-	<meta lastmodifieddate="2017-02-17">
-		<creator>Pirboss</creator>
-		<description>Test v1</description>
-	</meta>
-	<graph defaultedgetype="directed" mode="static">
-		<nodes>
-			<node id="0" label="ganzo_thebest"/>
-			<node id="1" label="Everyone"/>
-			<node id="2" label="Test02380725"/>
-			<node id="3" label="team_vaps"/>
-			<node id="4" label="LaTourEiffel"/>
-			<node id="5" label="france"/>
-		</nodes>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+    <graph>
+        <nodes>
+            <node id="a" label="glossy">
+                <viz:color r="0" g="0" b="200"/>
+                <viz:position x="15.783598" y="40.109245" z="0.0"/>
+                <viz:size value="2.0375757"/>
+                <viz:shape value="disc"/>
+            </node>
+			<node id="b" label="glossy2">
+                <viz:color r="239" g="0" b="0"/>
+                <viz:position x="10.783598" y="50.109245" z="0.0"/>
+                <viz:size value="2.0375757"/>
+                <viz:shape value="disc"/>
+            </node>
+			<node id="c" label="glossy3">
+                <viz:color r="0" g="200" b="0"/>
+                <viz:position x="0.783598" y="20.109245" z="0.0"/>
+                <viz:size value="2.0375757"/>
+                <viz:shape value="disc"/>
+            </node>
+        </nodes>
 		<edges>
-			<edge id="0" source="3" target="5">
-				<viz:thickness value="2.0"/>
-			</edge>
-			<edge id="1" source="3" target="3">
-				<viz:thickness value="2.0"/>
-			</edge>
-			<edge id="2" source="3" target="4">
+			<edge id="1" source="a" target="b">
+				<viz:color r="0" g="0" b="100"/>
 				<viz:thickness value="1.0"/>
+				<viz:shape value="solid"/>
 			</edge>
-			<edge id="3" source="3" target="1">
-				<viz:thickness value="1.0"/>
+			<edge id="2" source="a" target="c">
+				<viz:color r="0" g="100" b="0"/>
+				<viz:thickness value="2.0"/>
+				<viz:shape value="solid"/>
 			</edge>
 		</edges>
-	</graph>
+    </graph>
 </gexf>

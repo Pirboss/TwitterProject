@@ -26,6 +26,13 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.io.File;
 import javax.swing.JFrame;
+import org.gephi.graph.api.DirectedGraph;
+import org.gephi.graph.api.Edge;
+import org.gephi.graph.api.EdgeIterable;
+import org.gephi.graph.api.Graph;
+import org.gephi.graph.api.GraphController;
+import org.gephi.graph.api.GraphModel;
+import org.gephi.graph.api.UndirectedGraph;
 import org.gephi.io.importer.api.Container;
 import org.gephi.io.importer.api.ImportController;
 import org.gephi.io.processor.plugin.DefaultProcessor;
@@ -42,6 +49,8 @@ import org.openide.util.Lookup;
 public class PreviewJFrame {
 
     public void script() {
+        
+        
         //Init a project - and therefore a workspace
         ProjectController pc = Lookup.getDefault().lookup(ProjectController.class);
         pc.newProject();
@@ -61,6 +70,8 @@ public class PreviewJFrame {
 
         //Append imported data to GraphAPI
         importController.process(container, new DefaultProcessor(), workspace);
+        
+        
 
         //Preview configuration
         PreviewController previewController = Lookup.getDefault().lookup(PreviewController.class);
@@ -76,6 +87,20 @@ public class PreviewJFrame {
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_LABEL_COLOR, Color.RED);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_THICKNESS, 3);
         //New Processing target, get the PApplet
+        
+        GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
+        Graph g = graphModel.getGraph();
+        System.out.println("Nodes: " + g.getNodeCount());
+        System.out.println("Edges: " + g.getEdgeCount());
+        
+        for(Edge e : g.getEdges()){
+            System.out.println(e.getColor());
+            e.setColor(Color.YELLOW);
+            System.out.println(e.getColor());
+        }
+        
+        
+        
         G2DTarget target = (G2DTarget) previewController.getRenderTarget(RenderTarget.G2D_TARGET);
         final PreviewSketch previewSketch = new PreviewSketch(target);
         previewController.refreshPreview();

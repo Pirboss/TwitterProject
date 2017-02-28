@@ -133,7 +133,7 @@ public class The_vaps_project {
         s.detruireFichier("tweets.gexf");
         s.ouvrir("tweets.gexf");
         s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-        s.ecrire("<gexf xmlns=\"http://www.gexf.net/1.3draft\" version=\"1.3\" xmlns:viz=\"http://www.gexf.net/1.3draft/viz\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd\">\n");
+        s.ecrire("<gexf xmlns=\"http://www.gexf.net/1.2draft/gexf.xsd\" version=\"1.2\" xmlns:viz=\"http://www.gexf.net/1.1draft/viz\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd\">\n");
         s.ecrire("\t<meta lastmodifieddate=\"2017-02-17\">\n");
         s.ecrire("\t\t<creator>Pirboss</creator>\n");
         s.ecrire("\t\t<description>Test v1</description>\n");
