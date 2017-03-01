@@ -59,9 +59,14 @@ public class The_vaps_project {
         TwitterCriteria criteria = null;
         Tweet t = null;
         criteria = TwitterCriteria.create()
-                .setMaxTweets(5)
-                //.setUntil("2016-11-08")
-                .setQuerySearch("#test123456789");
+                .setMaxTweets(100)
+                .setUntil("2016-11-08")
+                .setQuerySearch("#NeverTrump OR #NeverHillary");
+        
+        Scribe corpus = new Scribe();
+        corpus.detruireFichier("src/resources/corpus.txt");
+        corpus.ouvrir("src/resources/corpus.txt");
+        
         Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
@@ -83,9 +88,13 @@ public class The_vaps_project {
             s.ecrire("\t\t<smileys>"+t.getSmileys()+"</smileys>\n");
             s.ecrire("\t\t<polarite>"+t.getPolarite()+"</polarite>\n");
             s.ecrire("\t</tweet>\n");
+            
+            corpus.ecrire(t.getText() + "\n");
         }
         s.ecrire("</tweets>");
         s.fermer();
+        
+        corpus.fermer();
     }
 
     
