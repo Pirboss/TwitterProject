@@ -6,6 +6,13 @@
 package the_vaps_project;
 
 
+import gephi.PreviewJFrame;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import me.jhenrique.manager.TweetManager;
 import me.jhenrique.manager.TwitterCriteria;
 import me.jhenrique.model.Tweet;
@@ -59,10 +66,10 @@ public class The_vaps_project {
         TwitterCriteria criteria = null;
         Tweet t = null;
         criteria = TwitterCriteria.create()
-                .setMaxTweets(5)
-                //.setUntil("2016-11-08")
-                .setQuerySearch("#test123456789");
-        Scribe s = new Scribe();
+                .setMaxTweets(500)
+                .setUntil("2016-11-08")
+                .setQuerySearch("#NeverTrump OR #NeverHilary");
+        /*Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
         s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
@@ -85,7 +92,78 @@ public class The_vaps_project {
             s.ecrire("\t</tweet>\n");
         }
         s.ecrire("</tweets>");
+        s.fermer();*/
+        
+        Set<String> users = new HashSet<>();
+        HashMap<DuoKey, Integer> map;
+        map = new HashMap<DuoKey, Integer>();
+        DuoKey duokey;
+        
+        
+        for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
+            System.out.println(i);
+            t = TweetManager.getTweets(criteria).get(i);
+            users.add(t.getUsername());
+            if(!t.getMentions().isEmpty()){
+                for(String target : t.getMentions().split(" ")){
+                    target = target.replaceFirst("@", "");
+                    users.add(target);
+                    duokey = new DuoKey(t.getUsername(), target);
+                    if(map.get(duokey) != null){
+                        map.put(duokey, map.get(duokey)+1);
+                    }else{
+                        map.put(duokey, 1);
+                    }
+                }
+            }
+        }
+        
+        
+        
+        /*for(int i=0; i<distinctList.size(); i++){
+            System.out.println(distinctList.get(i));
+        }*/
+        
+        /*Iterator it = map.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            System.out.println(pair.getKey().toString() + " = " + pair.getValue());
+            it.remove(); // avoids a ConcurrentModificationException
+        }*/
+        
+        Scribe s = new Scribe();
+        s.detruireFichier("tweets.gexf");
+        s.ouvrir("tweets.gexf");
+        s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        s.ecrire("<gexf xmlns=\"http://www.gexf.net/1.2draft/gexf.xsd\" version=\"1.2\" xmlns:viz=\"http://www.gexf.net/1.1draft/viz\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd\">\n");
+        s.ecrire("\t<meta lastmodifieddate=\"2017-02-17\">\n");
+        s.ecrire("\t\t<creator>Pirboss</creator>\n");
+        s.ecrire("\t\t<description>Test v1</description>\n");
+        s.ecrire("\t</meta>\n");
+        s.ecrire("\t<graph defaultedgetype=\"directed\" mode=\"static\">\n");
+        s.ecrire("\t\t<nodes>\n");
+        ArrayList distinctList = new ArrayList(users);
+        for(int i=0; i<distinctList.size(); i++){
+            s.ecrire("\t\t\t<node id=\""+i+"\" label=\""+distinctList.get(i)+"\"/>\n");
+        }
+        s.ecrire("\t\t</nodes>\n");
+        s.ecrire("\t\t<edges>\n");
+        Iterator it = map.entrySet().iterator();
+        int j=0;
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            //System.out.println(pair.getKey().toString() + " = " + pair.getValue());
+            s.ecrire("\t\t\t<edge id=\""+(j++)+"\" source=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getX())+"\" target=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getY())+"\" weight=\""+pair.getValue()+"\"/>\n");
+            it.remove(); // avoids a ConcurrentModificationException
+        }
+        s.ecrire("\t\t</edges>\n");
+        s.ecrire("\t</graph>\n");
+        s.ecrire("</gexf>");
         s.fermer();
+        
+        PreviewJFrame p = new PreviewJFrame();
+        p.script();
+                
     }
 
     
