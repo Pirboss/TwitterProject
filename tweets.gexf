@@ -3,19 +3,16 @@
     <graph>
         <nodes>
             <node id="a" label="glossy">
-                <viz:color r="0" g="0" b="200"/>
                 <viz:position x="15.783598" y="40.109245" z="0.0"/>
                 <viz:size value="2.0375757"/>
                 <viz:shape value="disc"/>
             </node>
 			<node id="b" label="glossy2">
-                <viz:color r="239" g="0" b="0"/>
                 <viz:position x="10.783598" y="50.109245" z="0.0"/>
                 <viz:size value="2.0375757"/>
                 <viz:shape value="disc"/>
             </node>
 			<node id="c" label="glossy3">
-                <viz:color r="0" g="200" b="0"/>
                 <viz:position x="0.783598" y="20.109245" z="0.0"/>
                 <viz:size value="2.0375757"/>
                 <viz:shape value="disc"/>

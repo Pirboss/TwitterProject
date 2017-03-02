@@ -25,6 +25,8 @@ import java.awt.Color;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import org.gephi.graph.api.DirectedGraph;
 import org.gephi.graph.api.Edge;
@@ -33,11 +35,13 @@ import org.gephi.graph.api.Graph;
 import org.gephi.graph.api.GraphController;
 import org.gephi.graph.api.GraphModel;
 import org.gephi.graph.api.UndirectedGraph;
+import org.gephi.io.exporter.api.ExportController;
 import org.gephi.io.importer.api.Container;
 import org.gephi.io.importer.api.ImportController;
 import org.gephi.io.processor.plugin.DefaultProcessor;
 import org.gephi.preview.api.*;
 import org.gephi.preview.types.DependantOriginalColor;
+import org.gephi.preview.types.EdgeColor;
 import org.gephi.project.api.ProjectController;
 import org.gephi.project.api.Workspace;
 import org.openide.util.Lookup;
@@ -79,26 +83,38 @@ public class PreviewJFrame {
         previewModel.getProperties().putValue(PreviewProperty.SHOW_NODE_LABELS, Boolean.TRUE);
         previewModel.getProperties().putValue(PreviewProperty.NODE_LABEL_COLOR, new DependantOriginalColor(Color.BLUE));
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
-        previewModel.getProperties().putValue(PreviewProperty.EDGE_RESCALE_WEIGHT, Boolean.TRUE);
+        //previewModel.getProperties().putValue(PreviewProperty.EDGE_RESCALE_WEIGHT, Boolean.TRUE);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
-        //previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.YELLOW);
+        previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.YELLOW);
         //previewModel.getProperties().putValue(PreviewProperty.SHOW_EDGES, Boolean.TRUE);
-        //previewModel.getProperties().putValue(PreviewProperty.EDGE_COLOR, Color.RED);
+        previewModel.getProperties().putValue(PreviewProperty.EDGE_COLOR, new EdgeColor(Color.RED));
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_LABEL_COLOR, Color.RED);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_THICKNESS, 3);
         //New Processing target, get the PApplet
         
-        GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
+        Item[] lesEdges = previewModel.getItems(previewModel);
+        System.out.println(lesEdges.length==0);
+        for (Item lesEdge : lesEdges) {
+            System.out.println("coucou\n");
+        }
+        /*GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
         Graph g = graphModel.getGraph();
         System.out.println("Nodes: " + g.getNodeCount());
         System.out.println("Edges: " + g.getEdgeCount());
-        
         for(Edge e : g.getEdges()){
-            System.out.println(e.getColor());
-            e.setColor(Color.YELLOW);
-            System.out.println(e.getColor());
-        }
+        System.out.println(e.getColor());
+        e.setColor(Color.YELLOW);
+        System.out.println(e.getColor());
+        }*/
         
+        
+        /*ExportController ec = Lookup.getDefault().lookup(ExportController.class);
+        try{
+            ec.exportFile( new File("aaa.gexf"));
+        } catch(IOException ex) {
+            ex.printStackTrace();
+            return;
+        }*/
         
         
         G2DTarget target = (G2DTarget) previewController.getRenderTarget(RenderTarget.G2D_TARGET);
