@@ -89,7 +89,7 @@ public class The_vaps_project {
             s.ecrire("\t\t<polarite>"+t.getPolarite()+"</polarite>\n");
             s.ecrire("\t</tweet>\n");
             
-            corpus.ecrire(s.filtrerURL(t.getText() + "\n"));
+            corpus.ecrire(s.filtrerTexte(t.getText() + "\n"));
         }
         s.ecrire("</tweets>");
         s.fermer();
