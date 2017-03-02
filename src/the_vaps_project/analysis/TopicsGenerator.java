@@ -75,7 +75,7 @@ public class TopicsGenerator {
 
         // Run the model for 50 iterations and stop (this is for testing only, 
         //  for real applications, use 1000 to 2000 iterations)
-        model.setNumIterations(100);
+        model.setNumIterations(2000);
         try {
             model.estimate();
         } catch (IOException ex) {
@@ -159,7 +159,12 @@ public class TopicsGenerator {
     }
     
     public static void main(String args[]) throws IOException {
-        for (Topic topic : getTopics(CorpusReader.getCorpusLemmatized("src/resources/sample.txt"), 100, 10)) {
+        /*
+        for (Topic topic : getTopics(CorpusReader.getCorpusLemmatized("src/resources/corpus.txt"), 20, 5)) {
+            System.out.println(topic.getName() + "\t" + topic.getWords());
+        }
+        */
+        for (Topic topic : getTopics(CorpusReader.getCorpus("src/resources/corpus.txt"), 20, 5)) {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
     }

@@ -69,4 +69,14 @@ public class Scribe {
             ioe.printStackTrace();
         }
     }
+    
+    public String filtrerURL(String texte) {
+        String str = texte;
+        
+        str = str.replaceAll("https?://\\S+\\s?", "");
+        str = str.replaceAll("http?://\\S+\\s?", "");
+        str = str.replaceAll("pic.twitter\\S+\\s?", "");
+        
+        return str;
+    }
 }

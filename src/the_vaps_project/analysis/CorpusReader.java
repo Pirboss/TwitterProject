@@ -37,6 +37,6 @@ public class CorpusReader {
         } catch (InterruptedException ex) {
             Logger.getLogger(CorpusReader.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return getCorpus("src/resources/sampleLem.txt");
+        return getCorpus("src/resources/corpusLem.txt");
     }
 }
