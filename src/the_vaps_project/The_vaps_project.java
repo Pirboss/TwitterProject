@@ -66,9 +66,9 @@ public class The_vaps_project {
         TwitterCriteria criteria = null;
         Tweet t = null;
         criteria = TwitterCriteria.create()
-                .setMaxTweets(10)
-                //.setUntil("2016-11-08")
-                .setQuerySearch("#test123456789");
+                .setMaxTweets(500)
+                .setUntil("2016-11-08")
+                .setQuerySearch("#NeverTrump OR #NeverHilary");
         /*Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
@@ -100,6 +100,7 @@ public class The_vaps_project {
         
         
         for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
+            System.out.println(i);
             t = TweetManager.getTweets(criteria).get(i);
             users.add(t.getUsername());
             if(!t.getMentions().isEmpty()){
@@ -151,9 +152,7 @@ public class The_vaps_project {
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
             //System.out.println(pair.getKey().toString() + " = " + pair.getValue());
-            s.ecrire("\t\t\t<edge id=\""+(j++)+"\" source=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getX())+"\" target=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getY())+"\">\n");
-            s.ecrire("\t\t\t\t<viz:thickness value=\""+pair.getValue()+".0\"/>\n");
-            s.ecrire("\t\t\t</edge>\n");
+            s.ecrire("\t\t\t<edge id=\""+(j++)+"\" source=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getX())+"\" target=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getY())+"\" weight=\""+pair.getValue()+"\"/>\n");
             it.remove(); // avoids a ConcurrentModificationException
         }
         s.ecrire("\t\t</edges>\n");

@@ -34,6 +34,7 @@ import org.gephi.graph.api.EdgeIterable;
 import org.gephi.graph.api.Graph;
 import org.gephi.graph.api.GraphController;
 import org.gephi.graph.api.GraphModel;
+import org.gephi.graph.api.Node;
 import org.gephi.graph.api.UndirectedGraph;
 import org.gephi.io.exporter.api.ExportController;
 import org.gephi.io.importer.api.Container;
@@ -87,16 +88,26 @@ public class PreviewJFrame {
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
         previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.YELLOW);
         //previewModel.getProperties().putValue(PreviewProperty.SHOW_EDGES, Boolean.TRUE);
-        previewModel.getProperties().putValue(PreviewProperty.EDGE_COLOR, new EdgeColor(Color.RED));
+        //previewModel.getProperties().putValue(PreviewProperty.EDGE_COLOR, new EdgeColor(Color.RED));
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_LABEL_COLOR, Color.RED);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_THICKNESS, 3);
         //New Processing target, get the PApplet
         
-        Item[] lesEdges = previewModel.getItems(previewModel);
+        GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getGraphModel(workspace);
+        
+        DirectedGraph directedGraph = graphModel.getDirectedGraph();
+        for (Edge e : directedGraph.getEdges().toArray()) {
+            e.setColor(Color.yellow);
+            System.out.println(e.getSource().getId() + " -> " + e.getTarget().getId());
+            
+        }
+        
+        
+        /*Item[] lesEdges = previewModel.getItems(previewModel);
         System.out.println(lesEdges.length==0);
         for (Item lesEdge : lesEdges) {
             System.out.println("coucou\n");
-        }
+        }*/
         /*GraphModel graphModel = Lookup.getDefault().lookup(GraphController.class).getGraphModel();
         Graph g = graphModel.getGraph();
         System.out.println("Nodes: " + g.getNodeCount());
