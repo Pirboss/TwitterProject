@@ -18,12 +18,17 @@ import java.util.regex.*;
 import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import the_vaps_project.Scribe;
+import the_vaps_project.analysis.perplexity.PerplexityMeasure;
 
 /**
  *
  * @author skander
  */
 public class TopicsGenerator {
+    
+    private static final String pathPhi = "src/resources/corpus.phi";
+    private static final String pathTheta = "src/resources/corpus.theta";
     
     /**
      * 
@@ -34,6 +39,13 @@ public class TopicsGenerator {
      */
     public static List<Topic> getTopics(Reader corpus, int nTopics, int nWords) {
         List<Topic> output = new ArrayList<>();
+        
+        Scribe sPhi = new Scribe();
+        Scribe sTheta = new Scribe();
+        sPhi.detruireFichier(pathPhi);
+        sTheta.detruireFichier(pathTheta);
+        sPhi.ouvrir(pathPhi);
+        sTheta.ouvrir(pathTheta);
         
         // Begin by importing documents from text to feature sequences
         ArrayList<Pipe> pipeList = new ArrayList<>();
@@ -75,7 +87,7 @@ public class TopicsGenerator {
 
         // Run the model for 50 iterations and stop (this is for testing only, 
         //  for real applications, use 1000 to 2000 iterations)
-        model.setNumIterations(2000);
+        model.setNumIterations(1000);
         try {
             model.estimate();
         } catch (IOException ex) {
@@ -97,8 +109,12 @@ public class TopicsGenerator {
         //System.out.println(out);
         
         // Estimate the topic distribution of the first instance, 
-        //  given the current Gibbs state.
+        // given the current Gibbs state.
         double[] topicDistribution = model.getTopicProbabilities(0);
+        
+        for (int i=0; i<topicDistribution.length; i++) {
+            sTheta.ecrire(topicDistribution[i] + " ");
+        }
 
         // Get an array of sorted sets of word ID/count pairs
         ArrayList<TreeSet<IDSorter>> topicSortedWords = model.getSortedWords();
@@ -115,7 +131,6 @@ public class TopicsGenerator {
                 out.format("%s (%.0f) ", dataAlphabet.lookupObject(idCountPair.getID()), idCountPair.getWeight());
                 rank++;
             }
-            //System.out.println(out);
         }
         
         /*
@@ -145,15 +160,40 @@ public class TopicsGenerator {
             
             Topic t = new Topic("Topic " + String.valueOf(topic));
             
+            double sum = 0;
+            
             int rank = 0;
+            //calcul de la somme du poid
+            while (iterator.hasNext() && rank < nWords) {
+                IDSorter idCountPair = iterator.next();
+                sum += idCountPair.getWeight();
+                rank++;
+            }
+            
+            rank = 0;
+            iterator = topicSortedWords.get(topic).iterator();
             while (iterator.hasNext() && rank < nWords) {
                 IDSorter idCountPair = iterator.next();
                 t.addWord((String) dataAlphabet.lookupObject(idCountPair.getID()));
+                
+                double wordTopicDistribution = idCountPair.getWeight() / sum;        
+                sPhi.ecrire(wordTopicDistribution + " ");
+                
                 rank++;
+            }
+            
+            if (topic < numTopics-1) {
+                sPhi.ecrire("\n");
             }
             
             output.add(t);
         }
+        
+        sPhi.fermer();
+        sTheta.fermer();
+        
+        System.out.println("\nThe perplexity for "+nTopics+" topics is : " 
+                + PerplexityMeasure.perplexity(pathPhi, pathTheta) + "\n");
         
         return output;
     }
@@ -164,7 +204,7 @@ public class TopicsGenerator {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
         */
-        for (Topic topic : getTopics(CorpusReader.getCorpus("src/resources/corpus.txt"), 20, 5)) {
+        for (Topic topic : getTopics(CorpusReader.getCorpus("src/resources/corpus.txt"), 76, 5)) {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
     }
