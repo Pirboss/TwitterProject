@@ -27,8 +27,11 @@ import the_vaps_project.analysis.perplexity.PerplexityMeasure;
  */
 public class TopicsGenerator {
     
+    private static final String pathCorpus = "src/resources/corpus.txt";
     private static final String pathPhi = "src/resources/corpus.phi";
     private static final String pathTheta = "src/resources/corpus.theta";
+    
+    private double perplexite = 0;
     
     /**
      * 
@@ -37,7 +40,7 @@ public class TopicsGenerator {
      * @param nWords number of words per topic (it keeps the most relevant ones).
      * @return 
      */
-    public static List<Topic> getTopics(Reader corpus, int nTopics, int nWords) {
+    public List<Topic> getTopics(Reader corpus, int nTopics, int nWords) {
         List<Topic> output = new ArrayList<>();
         
         Scribe sPhi = new Scribe();
@@ -87,7 +90,7 @@ public class TopicsGenerator {
 
         // Run the model for 50 iterations and stop (this is for testing only, 
         //  for real applications, use 1000 to 2000 iterations)
-        model.setNumIterations(1000);
+        model.setNumIterations(50);
         try {
             model.estimate();
         } catch (IOException ex) {
@@ -192,21 +195,62 @@ public class TopicsGenerator {
         sPhi.fermer();
         sTheta.fermer();
         
-        System.out.println("\nThe perplexity for "+nTopics+" topics is : " 
-                + PerplexityMeasure.perplexity(pathPhi, pathTheta) + "\n");
+        perplexite = PerplexityMeasure.perplexity(pathPhi, pathTheta);
+        
+        
+        System.out.println("\nLa perplexité pour "+nTopics+" topics est : " 
+                + perplexite + "\n");
         
         return output;
     }
     
     public static void main(String args[]) throws IOException {
         /*
-        for (Topic topic : getTopics(CorpusReader.getCorpusLemmatized("src/resources/corpus.txt"), 20, 5)) {
+        for (Topic topic : tg.getTopics(CorpusReader.getCorpusLemmatized("src/resources/corpus.txt"), 20, 5)) {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
         */
-        for (Topic topic : getTopics(CorpusReader.getCorpus("src/resources/corpus.txt"), 76, 5)) {
+        
+        TopicsGenerator tg = new TopicsGenerator();
+        /*
+        for (Topic topic : tg.getTopics(CorpusReader.getCorpus(pathCorpus), 76, 10)) {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
+        */
+        System.out.println("NbTopic ideal = " + tg.calculNbTopicIdeal());
+    }
+    
+    /**
+     * Calcule le nombre idéal de topic par rapport au corpus.
+     * Attention : Prend beaucoup de temps à s'exécuter !!!
+     * N'utiliser cette méthode qu'une fois par corpus.
+     * @return nombre idéal de topic par rapport au corpus.
+     */
+    public int calculNbTopicIdeal () {
+        int nbTopic = 1;
+        double currentBest = 0;
+        
+        boolean isOk;
+        
+        for (int i=1; i<=100; i++) {
+            
+            /* Parfois le résultat de Mallet est incompatible avec le code de PerplexityMeasure
+            pour le moment j'ai rien de mieux que de relancer Mallet */
+            isOk = false;
+            while (!isOk) {
+                try {
+                    getTopics(CorpusReader.getCorpus(pathCorpus), i, 10);
+                    isOk = true;
+                }catch(Exception e) {}
+            }
+            
+            if (currentBest < perplexite) {
+                nbTopic = i;
+                currentBest = perplexite;
+            }
+        }
+        
+        return nbTopic;
     }
     
 }
