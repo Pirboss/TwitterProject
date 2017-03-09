@@ -37,7 +37,6 @@ public class MachineLearning {
 
             //traitement du document
             Element racine = document.getDocumentElement();
-            System.out.println(racine.getNodeName());
             NodeList maliste = racine.getChildNodes();
             printListe(maliste);
 

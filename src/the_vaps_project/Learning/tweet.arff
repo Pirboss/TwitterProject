@@ -1,0 +1,18 @@
+
+%{'Positif', 'Negatif'} 
+
+
+@RELATION tweet
+
+@ATTRIBUTE Adjectifs String 
+@ATTRIBUTE Opinion String               
+@ATTRIBUTE Negation { TRUE, FALSE }   
+@ATTRIBUTE Ponctuation { TRUE, FALSE }  
+@ATTRIBUTE Class {Positif, Negatif, Neutre}
+
+@DATA
+
+admirable   
+admirably
+loser
+losers

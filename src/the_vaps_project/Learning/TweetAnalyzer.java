@@ -11,6 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import org.openide.util.Exceptions;
@@ -29,8 +30,17 @@ public class TweetAnalyzer {
         mots = tweet.split(" ");
         score = calcScore();
         vector = new ArrayList();
+        if (score == 0) {
+            System.out.println(tweet + " -> neutre");
+        }
+        else if (score>0) {
+            System.out.println(tweet + " -> positif");
+        }
+        else {
+            System.out.println(tweet + " -> negatif");
+        }
     }
-    
+
 //    private boolean contient (String mots[], String mot)
 //    {
 //        for (String mot1 : mots)
@@ -40,22 +50,57 @@ public class TweetAnalyzer {
 //    }
 //    
     private int calcScore() {
-
         BufferedReader negation_word, negative_word, positive_word = null;
         String ligne;
+        int score = 0;
+
+        Comparator comparator = String.CASE_INSENSITIVE_ORDER;
+        int comparaison = comparator.compare("Hello World", "hello world");
 
         try {
             negation_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negation-word.txt"));
-            negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negation-word.txt"));
-            positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negation-word.txt"));
+            negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negative-words.txt"));
+            positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
 
-            for (String mot : this.mots) {
-//                System.out.println(mot);
-                while ((ligne = negative_word.readLine()) != null) 
-                    if (mot.equals(ligne)) 
-                        System.out.println(mot);
-            };
-            
+            for (int i = 0; i < mots.length; ++i) {
+//                System.out.println(mots[i] + " " + score);
+                while ((ligne = negative_word.readLine()) != null) {
+                    if (mots[i].equalsIgnoreCase(ligne)) {
+                        --score;
+                    }
+                }
+                while ((ligne = positive_word.readLine()) != null) {
+                    if (mots[i].equalsIgnoreCase(ligne)) {
+                        ++score;
+                    }
+                }
+                while ((ligne = negation_word.readLine()) != null) {
+                    if (mots[i].equalsIgnoreCase(ligne)) {
+                        positive_word.close();
+                        negative_word.close();
+                        negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negative-words.txt"));
+                        positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
+                        while ((ligne = negative_word.readLine()) != null) {
+                            if (mots[i+1].equalsIgnoreCase(ligne)) {
+                                ++score;
+                            }
+                        }
+                        while ((ligne = positive_word.readLine()) != null) {
+                            if (mots[i+1].equalsIgnoreCase(ligne)) {
+                                --score;
+                            }
+                        }
+                        ++i;
+                    }
+                    
+                }
+                positive_word.close();
+                negation_word.close();
+                negative_word.close();
+                negation_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negation-word.txt"));
+                negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negative-words.txt"));
+                positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
+            }
 
 //            while ((ligne = negation_word.readLine()) != null) {
 //                
@@ -70,7 +115,7 @@ public class TweetAnalyzer {
             Exceptions.printStackTrace(ex);
         }
 
-        return 0;
+        return score;
     }
 
 }

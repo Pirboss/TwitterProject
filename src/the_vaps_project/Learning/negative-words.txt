@@ -159,6 +159,7 @@ antithetical
 anxieties
 anxiety
 anxious
+Sociopath
 anxiously
 anxiousness
 apathetic
@@ -2996,6 +2997,7 @@ nag
 nagging
 naive
 naively
+narcissist
 narrower
 nastily
 nastiness
@@ -4880,3 +4882,6 @@ vain
 vengeful
 vulgar
 weak-willed
+#NeverTrump
+#ImWithHer
+#trumpprotest

@@ -1839,7 +1839,6 @@ triumphantly
 trivially
 trophy
 trouble-free
-trump
 trumpet
 trust
 trusted
@@ -2103,3 +2102,10 @@ versatile
 warmhearted
 willing
 witty
+#TrumpWins
+#TrumpLandslide
+#TrumpPresident
+#TrumpMovement
+#TrumpNation
+#TrumpTrain
+#MakeAmericaGreatAgain
