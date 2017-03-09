@@ -68,7 +68,7 @@ public class The_vaps_project {
         criteria = TwitterCriteria.create()
                 .setMaxTweets(500)
                 .setUntil("2016-11-08")
-                .setQuerySearch("#NeverTrump OR #NeverHilary");
+                .setQuerySearch("#yesTrump OR #TrumpPresident"); //#womensday2017 OR #beboldforchange OR #daywithoutawoman
         Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");

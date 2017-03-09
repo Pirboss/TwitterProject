@@ -32,7 +32,7 @@ public class MachineLearning {
             DocumentBuilder constructeur = fabrique.newDocumentBuilder();
 
             // lecture du contenu d'un fichier XML avec DOM
-            File xml = new File(System.getProperty("user.dir") + "/tweets.xml");
+            File xml = new File(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\tweets.xml");
             Document document = constructeur.parse(xml);
 
             //traitement du document
@@ -58,7 +58,10 @@ public class MachineLearning {
             if (liste.item(i).getNodeType() == Node.ELEMENT_NODE) {
 
                 if (liste.item(i).getNodeName().equals("text"))
-                System.out.println(liste.item(i).getTextContent());
+                {
+                    TweetAnalyzer ta = new TweetAnalyzer(liste.item(i).getTextContent());
+                    
+                }
 
             }
             printListe(liste.item(i).getChildNodes());
