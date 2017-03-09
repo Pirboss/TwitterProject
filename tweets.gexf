@@ -6,77 +6,26 @@
 	</meta>
 	<graph defaultedgetype="directed" mode="static">
 		<nodes>
-			<node id="0" label="MG4NoH8"/>
-			<node id="1" label="dreamingluzy"/>
-			<node id="2" label="jstines3"/>
-			<node id="3" label="Dailytakes"/>
-			<node id="4" label="kcgun13"/>
-			<node id="5" label="bdragon74"/>
-			<node id="6" label="SanguineRepose"/>
-			<node id="7" label="jonsnip"/>
-			<node id="8" label="6ft2breadwinner"/>
-			<node id="9" label="JoyAnnReid"/>
-			<node id="10" label="hermanbutler1"/>
-			<node id="11" label="HillaryClinton"/>
-			<node id="12" label="MattJGNY"/>
-			<node id="13" label="ckkoch3"/>
-			<node id="14" label="MomYourek"/>
-			<node id="15" label="vicrob21"/>
-			<node id="16" label="johnp925"/>
-			<node id="17" label="AzumaNelson"/>
-			<node id="18" label="washingtonpost"/>
-			<node id="19" label="Scott2Hill"/>
-			<node id="20" label="Brenda_Duk"/>
-			<node id="21" label="robert_zubrin"/>
-			<node id="22" label="JanetSanford60"/>
-			<node id="23" label="HPorretta"/>
-			<node id="24" label="BillWhittle"/>
-			<node id="25" label="ronnin42"/>
-			<node id="26" label="Simplyoncall"/>
-			<node id="27" label="MrBudSmith"/>
-			<node id="28" label="FeministWomb"/>
-			<node id="29" label="loisaltermark"/>
-			<node id="30" label="MrNwatu"/>
-			<node id="31" label="monicalr75"/>
-			<node id="32" label="josue_arias"/>
-			<node id="33" label="MzDivah67"/>
-			<node id="34" label="realDenaldTrump"/>
-			<node id="35" label="ianmcnabb08"/>
-			<node id="36" label="AliActivist"/>
-			<node id="37" label="velvetus1"/>
-			<node id="38" label="BarackObama"/>
-			<node id="39" label="ananavarro"/>
-			<node id="40" label="OuttaBaghdad4Nw"/>
-			<node id="41" label="Hip_Threads"/>
-			<node id="42" label="Bakari_Sellers"/>
-			<node id="43" label="nolefan01"/>
-			<node id="44" label="FashNova"/>
-			<node id="45" label="BrandiGayle"/>
-			<node id="46" label="sara417"/>
-			<node id="47" label="EstherNMNLim"/>
-			<node id="48" label="scottbix"/>
-			<node id="49" label="bekindusa"/>
-			<node id="50" label="NH92276"/>
-			<node id="51" label="MsMDNACiccone"/>
-			<node id="52" label="BlondieCLJ"/>
-			<node id="53" label="apwriter"/>
-			<node id="54" label="KevinMLevy"/>
-			<node id="55" label="realDonaldTrump"/>
+			<node id="0" label="scottbix"/>
+			<node id="1" label="MG4NoH8"/>
+			<node id="2" label="NH92276"/>
+			<node id="3" label="washingtonpost"/>
+			<node id="4" label="Scott2Hill"/>
+			<node id="5" label="Brenda_Duk"/>
+			<node id="6" label="kcgun13"/>
+			<node id="7" label="robert_zubrin"/>
+			<node id="8" label="realDenaldTrump"/>
+			<node id="9" label="ianmcnabb08"/>
+			<node id="10" label="AliActivist"/>
+			<node id="11" label="MattJGNY"/>
+			<node id="12" label="Bakari_Sellers"/>
+			<node id="13" label="FashNova"/>
 		</nodes>
 		<edges>
-			<edge id="0" source="20" target="42" weight="1"/>
-			<edge id="1" source="29" target="39" weight="1"/>
-			<edge id="2" source="16" target="9" weight="1"/>
-			<edge id="3" source="7" target="24" weight="1"/>
-			<edge id="4" source="28" target="38" weight="1"/>
-			<edge id="5" source="4" target="34" weight="1"/>
-			<edge id="6" source="20" target="48" weight="1"/>
-			<edge id="7" source="16" target="8" weight="1"/>
-			<edge id="8" source="44" target="18" weight="1"/>
-			<edge id="9" source="1" target="55" weight="1"/>
-			<edge id="10" source="14" target="55" weight="1"/>
-			<edge id="11" source="49" target="11" weight="1"/>
-			<edge id="12" source="16" target="13" weight="1"/>
+			<edge id="0" source="5" target="12" weight="1"/>
+			<edge id="1" source="13" target="3" weight="1"/>
+			<edge id="2" source="6" target="8" weight="1"/>
+			<edge id="3" source="5" target="0" weight="1"/>
 		</edges>
 	</graph>
 </gexf>

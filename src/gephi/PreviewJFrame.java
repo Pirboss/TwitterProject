@@ -51,8 +51,8 @@ import org.openide.util.Lookup;
  *
  * @author Mathieu Bastian
  */
-public class PreviewJFrame {
-
+public class PreviewJFrame{
+    
     public void script() {
         
         
@@ -66,7 +66,7 @@ public class PreviewJFrame {
         Container container;
         try {
             //File file = new File(getClass().getResource("/org/gephi/toolkit/demos/Java.gexf").toURI());
-            File file = new File("tweets.gexf");
+            File file = new File("graphFollowers.gexf");
             container = importController.importFile(file);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -150,10 +150,4 @@ public class PreviewJFrame {
         });
         frame.setVisible(true);
     }
-
-    public static void main(String[] args) {
-        PreviewJFrame previewJFrame = new PreviewJFrame();
-        previewJFrame.script();
-    }
-
 }
