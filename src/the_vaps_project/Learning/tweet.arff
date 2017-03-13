@@ -1,18 +1,40 @@
-
-%{'Positif', 'Negatif'} 
-
-
 @RELATION tweet
 
-@ATTRIBUTE Adjectifs String 
-@ATTRIBUTE Opinion String               
+
+@ATTRIBUTE motPositif Numeric
+@ATTRIBUTE motNegatif Numeric
 @ATTRIBUTE Negation { TRUE, FALSE }   
 @ATTRIBUTE Ponctuation { TRUE, FALSE }  
-@ATTRIBUTE Class {Positif, Negatif, Neutre}
+@ATTRIBUTE class {Positif, Negatif, Neutre}
 
 @DATA
 
-admirable   
-admirably
-loser
-losers
+0,2,FALSE,FALSE,Negatif
+0,2,FALSE,FALSE,Negatif
+7,0,FALSE,FALSE,Positif
+0,1,FALSE,FALSE,Negatif
+0,3,TRUE,FALSE,Negatif
+0,2,FALSE,FALSE,Negatif
+0,2,FALSE,FALSE,Negatif
+0,2,FALSE,FALSE,Negatif
+0,1,TRUE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+0,2,FALSE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+0,2,FALSE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+1,1,FALSE,FALSE,Neutre
+1,2,FALSE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+1,1,FALSE,FALSE,Neutre
+0,1,FALSE,FALSE,Negatif
+1,1,FALSE,FALSE,Neutre
+0,3,FALSE,FALSE,Negatif
+0,1,TRUE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+0,1,FALSE,FALSE,Negatif
+2,0,FALSE,FALSE,Positif
+2,0,FALSE,FALSE,Positif
+3,0,FALSE,FALSE,Positif
+1,0,FALSE,FALSE,Positif

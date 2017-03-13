@@ -10,6 +10,7 @@ import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 import java.io.*;
+import the_vaps_project.Scribe;
 
 /**
  *
@@ -38,8 +39,21 @@ public class MachineLearning {
             //traitement du document
             Element racine = document.getDocumentElement();
             NodeList maliste = racine.getChildNodes();
-            printListe(maliste);
-
+            Scribe s = new Scribe();
+        s.detruireFichier("src\\the_vaps_project\\Learning\\tweet.arff");
+        s.ouvrir("src\\the_vaps_project\\Learning\\tweet.arff");
+        s.ecrire("@RELATION tweet\n"
+                + "\n"
+                + "\n"
+                + "@ATTRIBUTE motPositif Numeric\n"
+                + "@ATTRIBUTE motNegatif Numeric\n"
+                + "@ATTRIBUTE Negation { TRUE, FALSE }   \n"
+                + "@ATTRIBUTE Ponctuation { TRUE, FALSE }  \n"
+                + "@ATTRIBUTE class {Positif, Negatif, Neutre}\n"
+                + "\n"
+                + "@DATA\n\n");
+            printListe(s, maliste);
+s.fermer();
         } catch (ParserConfigurationException pce) {
             System.out.println("Erreur de configuration du parseur DOM");
             System.out.println("lors de l'appel � fabrique.newDocumentBuilder();");
@@ -50,21 +64,38 @@ public class MachineLearning {
             System.out.println("Erreur d'entr�e/sortie");
             System.out.println("lors de l'appel � construteur.parse(xml)");
         }
+        
     }
 
-    public static void printListe(NodeList liste) {
+    public static void printListe(Scribe s, NodeList liste) {
+        
+                
+        
+
+        
+        
         for (int i = 0; i < liste.getLength(); i++) {
             if (liste.item(i).getNodeType() == Node.ELEMENT_NODE) {
 
                 if (liste.item(i).getNodeName().equals("text"))
                 {
                     TweetAnalyzer ta = new TweetAnalyzer(liste.item(i).getTextContent());
-                    
+                            String classe;
+                    if (ta.getScore() == 0) {
+                        classe = "Neutre";
+                    } else if (ta.getScore() > 0) {
+                        classe = "Positif";
+                    } else {
+                        classe = "Negatif";
+                    }
+
+                    s.ecrire(ta.getNbMotsPositif() + "," + ta.getNbMotsNegatifs() + "," + ta.isNegation() + "," + ta.isPonctuation() + "," + classe + "\n");
                 }
 
             }
-            printListe(liste.item(i).getChildNodes());
+            printListe(s, liste.item(i).getChildNodes());
         }
+        
     }
 
 }
