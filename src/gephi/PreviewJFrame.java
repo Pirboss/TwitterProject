@@ -86,7 +86,7 @@ public class PreviewJFrame{
         previewModel.getProperties().putValue(PreviewProperty.EDGE_CURVED, Boolean.FALSE);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_RESCALE_WEIGHT, Boolean.TRUE);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_OPACITY, 50);
-        previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.YELLOW);
+        //previewModel.getProperties().putValue(PreviewProperty.BACKGROUND_COLOR, Color.YELLOW);
         //previewModel.getProperties().putValue(PreviewProperty.SHOW_EDGES, Boolean.TRUE);
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_COLOR, new EdgeColor(Color.RED));
         //previewModel.getProperties().putValue(PreviewProperty.EDGE_LABEL_COLOR, Color.RED);

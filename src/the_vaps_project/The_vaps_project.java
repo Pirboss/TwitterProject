@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import me.jhenrique.manager.TweetManager;
 import me.jhenrique.manager.TwitterCriteria;
 import me.jhenrique.model.Tweet;
@@ -73,7 +74,7 @@ public class The_vaps_project {
         criteria = TwitterCriteria.create()
                 .setMaxTweets(10)
                 .setUntil("2016-11-08")
-                .setQuerySearch("#NeverTrump OR #NeverHilary");
+                .setQuerySearch("#NeverTrump");
         /*Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
@@ -99,6 +100,9 @@ public class The_vaps_project {
         s.ecrire("</tweets>");
         s.fermer();*/
         
+        /* SUPER SITE D'EXEMPLES
+        https://github.com/yusuke/twitter4j/tree/master/twitter4j-examples/src/main/java/twitter4j/examples*/
+        
         /*PARTIE GRAPHE DES RETWEETS*/
         Set<String> nameOfUsers = new HashSet<>();
         for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
@@ -116,8 +120,8 @@ public class The_vaps_project {
         TwitterFactory tf = new TwitterFactory(cb.build());
         twitter4j.Twitter twitter = tf.getInstance();
         
-        String[] screenNames = nameOfUsers.toArray(new String[0]);
-        /*ResponseList<User> usersNames;
+        /*String[] screenNames = nameOfUsers.toArray(new String[0]);
+        ResponseList<User> usersNames;
         long cursor = -1;
         IDs ids;
         try {
@@ -133,22 +137,44 @@ public class The_vaps_project {
             Exceptions.printStackTrace(ex);
         }*/
         
+        
         Set<DuoKey> utilisateurs = new HashSet<>();
         Set<DuoKey> liens = new HashSet<>();
+        
+        //User us;
 
         try{
-            PagableResponseList<User> listeFollowers;
+            int nbpages = 0;
+            long cursor = -1;
+            PagableResponseList<User> listeFollowersTemp;
+            ArrayList<User> listeFollowers = new ArrayList<User>();
             for(String s: nameOfUsers){
-                utilisateurs.add(new DuoKey(s,"auteurTweet"));
-                listeFollowers = twitter.getFollowersList(s, -1);
+                if(!utilisateurs.contains(new DuoKey(s,"auteurTweet"))){
+                    
+                
+                    utilisateurs.add(new DuoKey(s,"auteurTweet"));
+
+                    //listeFollowersTemp = twitter.getFollowersList(s, -1);
+                    do {
+                        TimeUnit.MINUTES.sleep(1);
+                        listeFollowersTemp = twitter.getFollowersList(s, cursor);
+
+                        for (User u : listeFollowersTemp) {
+                            listeFollowers.add(u);
+                        }
+                        nbpages++;
+                    } while (((cursor = listeFollowersTemp.getNextCursor()) != 0) && nbpages <= 9); //4=100 followers par auteur de tweet recherché
+                }
                 System.out.println(s+", mes followers sont :");
                 for(User u: listeFollowers){
-                    utilisateurs.add(new DuoKey(u.getName(), "followerDeAuteur"));
-                    liens.add(new DuoKey(s,u.getName()));
+                    utilisateurs.add(new DuoKey(u.getName(), "auteurTweet"));
+                    liens.add(new DuoKey(u.getName(), s));
                     System.out.println("\t"+u.getName());
                 }
+                listeFollowers.clear();
+                nbpages = 0;
             }
-        } catch (TwitterException ex) {
+        } catch (TwitterException | InterruptedException ex) {
             Exceptions.printStackTrace(ex);
         }
         
@@ -165,14 +191,16 @@ public class The_vaps_project {
         sc.ecrire("\t<graph defaultedgetype=\"directed\" mode=\"static\">\n");
         sc.ecrire("\t\t<nodes>\n");
         ArrayList<DuoKey> distinctListOfUsers = new ArrayList(utilisateurs);
+        System.out.println(distinctListOfUsers.size());
         for(int i=0; i<distinctListOfUsers.size(); i++){
-            sc.ecrire("\t\t\t<node id=\""+distinctListOfUsers.get(i).getX()+"\" label=\""+distinctListOfUsers.get(i).getX()+"\"/>\n");
+            sc.ecrire("\t\t\t<node id=\""+distinctListOfUsers.get(i).getX().replace("&", "&amp;")+"\" label=\""+distinctListOfUsers.get(i).getX().replace("&", "&amp;")+"\"/>\n");
         }
         sc.ecrire("\t\t</nodes>\n");
         sc.ecrire("\t\t<edges>\n");
         ArrayList<DuoKey> distinctListOfLinks = new ArrayList(liens);
+        System.out.println(distinctListOfLinks.size());
         for(int i=0; i<liens.size(); i++){
-            sc.ecrire("\t\t\t<edge id=\""+(i++)+"\" source=\""+distinctListOfLinks.get(i).getX()+"\" target=\""+distinctListOfLinks.get(i).getY()+"\"/>\n");
+            sc.ecrire("\t\t\t<edge id=\""+i+"\" source=\""+distinctListOfLinks.get(i).getX().replace("&", "&amp;")+"\" target=\""+distinctListOfLinks.get(i).getY().replace("&", "&amp;")+"\"/>\n");
         }
         
         sc.ecrire("\t\t</edges>\n");
@@ -180,8 +208,9 @@ public class The_vaps_project {
         sc.ecrire("</gexf>");
         sc.fermer();
         
-        /*PreviewJFrame p = new PreviewJFrame();
-        p.script();*/
+        
+        PreviewJFrame p = new PreviewJFrame();
+        p.script();
         
         
         
@@ -192,7 +221,8 @@ public class The_vaps_project {
         
         
         /*PARTIE GRAPHE DES MENTIONS*/
-        Set<String> users = new HashSet<>();
+        //NE PAS OUBLIE LE COUP DE REMPLACER LES .replace("&", "&amp;") POUR LE XML 
+        /*Set<String> users = new HashSet<>();
         HashMap<DuoKey, Integer> map;
         map = new HashMap<DuoKey, Integer>();
         DuoKey duokey;
@@ -213,19 +243,6 @@ public class The_vaps_project {
                 }
             }
         }
-        
-        
-        
-        /*for(int i=0; i<distinctList.size(); i++){
-            System.out.println(distinctList.get(i));
-        }*/
-        
-        /*Iterator it = map.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry)it.next();
-            System.out.println(pair.getKey().toString() + " = " + pair.getValue());
-            it.remove(); // avoids a ConcurrentModificationException
-        }*/
         
         Scribe s = new Scribe();
         s.detruireFichier("tweets.gexf");
@@ -248,7 +265,6 @@ public class The_vaps_project {
         int jj=0;
         while (ite.hasNext()) {
             Map.Entry pair = (Map.Entry)ite.next();
-            //System.out.println(pair.getKey().toString() + " = " + pair.getValue());
             s.ecrire("\t\t\t<edge id=\""+(jj++)+"\" source=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getX())+"\" target=\""+distinctList.indexOf(((DuoKey)pair.getKey()).getY())+"\" weight=\""+pair.getValue()+"\"/>\n");
             ite.remove(); // avoids a ConcurrentModificationException
         }
@@ -258,7 +274,7 @@ public class The_vaps_project {
         s.fermer();
         
         PreviewJFrame pr = new PreviewJFrame();
-        pr.script();
+        pr.script();*/
                 
     }
 

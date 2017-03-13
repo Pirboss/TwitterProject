@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2017-03-10">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="directed" mode="static">
+    <nodes>
+      <node id="juniormint73" label="juniormint73">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-86.32413" y="45.116272"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="#TBF #F4F  シ" label="#TBF #F4F  シ">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="394.5061" y="-55.01962"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="cassy" label="cassy">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-22.659391" y="-173.18042"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Diane Dibenedetto" label="Diane Dibenedetto">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-234.76955" y="350.9808"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="KathrynTheCurious" label="KathrynTheCurious">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-337.9857" y="-328.08032"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="XtraNastyWoman&#x1f1fa;&#x1f1f8;" label="XtraNastyWoman&#x1f1fa;&#x1f1f8;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="324.16373" y="-188.13896"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="MattJGNY" label="MattJGNY">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="355.9583" y="-114.89869"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="Amanda Springer" label="Amanda Springer">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="425.99255" y="-74.45569"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Helen Lilley" label="Helen Lilley">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="159.64674" y="22.234224"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="SocialInTempe" label="SocialInTempe">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="122.36671" y="-329.27402"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ben Landis" label="Ben Landis">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-254.97646" y="-349.0799"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Paying Attention" label="Paying Attention">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="422.2793" y="4.271485"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="iSoccerAm" label="iSoccerAm">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-200.82016" y="-326.5812"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ze" label="Ze">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-242.2839" y="-62.190376"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Rebecca A. Maas" label="Rebecca A. Maas">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-427.1318" y="-117.90346"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Kazuhiro Yoshinori" label="Kazuhiro Yoshinori">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-77.785286" y="-156.23676"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Trigger Me Happy" label="Trigger Me Happy">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-138.12231" y="-62.172962"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Downtown Nashville" label="Downtown Nashville">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-247.78445" y="266.34802"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="LE VTC TCHATCHEUR" label="LE VTC TCHATCHEUR">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-48.768948" y="-339.30194"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Odhrán Kavanagh" label="Odhrán Kavanagh">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-549.3235" y="-41.129543"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Paul Snow" label="Paul Snow">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="69.33083" y="-356.34708"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Rennie❄" label="Rennie❄">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-266.36652" y="49.92315"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Cheryl Hughes" label="Cheryl Hughes">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-87.39475" y="85.49791"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="YellieKat" label="YellieKat">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-262.96716" y="146.96909"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="BalboCat|MarineLepen" label="BalboCat|MarineLepen">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-310.39383" y="-39.678673"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ted Schantz" label="Ted Schantz">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="217.26021" y="299.5727"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="(((Shining City)))" label="(((Shining City)))">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="340.3547" y="-15.731948"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="PC: United" label="PC: United">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-73.13249" y="-209.4347"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Curt Werner" label="Curt Werner">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="8.657331" y="-190.70276"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Amol Acharya" label="Amol Acharya">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="285.46814" y="327.23972"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="funny tweets" label="funny tweets">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-199.3712" y="-82.8113"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="EntertainmentTonight" label="EntertainmentTonight">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-114.192696" y="207.31555"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Eric Swalwell" label="Eric Swalwell">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="100.52648" y="147.89592"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="loony" label="loony">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="85.633865" y="302.0605"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Chad Aaron S" label="Chad Aaron S">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="234.80042" y="-112.886406"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Nathan Muir" label="Nathan Muir">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-303.11935" y="120.78137"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="STOP-Homophobia.com" label="STOP-Homophobia.com">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-307.18106" y="-238.67043"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="kαylα" label="kαylα">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-228.24747" y="227.87701"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="You and Me..(^_^)" label="You and Me..(^_^)">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-73.507805" y="227.75722"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="MyFreeConcert NY" label="MyFreeConcert NY">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="96.47693" y="126.180534"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Daniel Brand" label="Daniel Brand">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="248.94305" y="-322.60526"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Jeremiah Charles" label="Jeremiah Charles">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-36.26309" y="350.95065"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Tyler Large" label="Tyler Large">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="305.16858" y="11.515523"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Taylor Egly" label="Taylor Egly">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-363.75937" y="14.364318"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="philip harris" label="philip harris">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-188.49295" y="-262.60266"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Pro-Choice Resources" label="Pro-Choice Resources">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="188.07512" y="64.83204"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Shaniqua" label="Shaniqua">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="424.06937" y="30.457159"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="B. Janine Morison" label="B. Janine Morison">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-429.62723" y="146.84229"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Harjinder S Kukreja" label="Harjinder S Kukreja">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-7.367125" y="106.17711"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Samuel" label="Samuel">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="228.60039" y="-6.992973"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Charlie" label="Charlie">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-461.51614" y="10.894242"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Volound" label="Volound">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="230.22188" y="240.81505"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="ETAN" label="ETAN">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="69.01966" y="189.39967"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Justthefacts" label="Justthefacts">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-199.66632" y="128.09422"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ford" label="Ford">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="175.55035" y="242.43028"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Wild Colonial Boy ☨" label="Wild Colonial Boy ☨">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-339.66666" y="-79.395744"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Craig Rozniecki" label="Craig Rozniecki">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="179.75328" y="-150.66199"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="P.E.S." label="P.E.S.">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="32.097717" y="242.452"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="TheDailyLiberal" label="TheDailyLiberal">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="108.760704" y="-129.99867"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ua Position" label="Ua Position">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="299.38757" y="-213.94542"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ukrainada_" label="Ukrainada_">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="330.6608" y="44.235077"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="CJ Townsend" label="CJ Townsend">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-208.30122" y="103.925705"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="A10 Warthog" label="A10 Warthog">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="19.553968" y="65.43887"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="The Tracy&amp;Craig Show" label="The Tracy&amp;Craig Show">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="325.6057" y="-94.50763"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Jay McKenzie" label="Jay McKenzie">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="232.82184" y="105.825485"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="My New Gravity" label="My New Gravity">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-188.60991" y="-218.23189"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="PACC" label="PACC">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="386.88565" y="180.91669"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Fete" label="Fete">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="281.81888" y="-169.04643"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="The Commonwealth" label="The Commonwealth">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-53.736427" y="-81.38913"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Heather Haney" label="Heather Haney">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-167.67274" y="166.82106"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Kennedy" label="Kennedy">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="41.554214" y="-151.90675"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="TOP BRASS VODKA" label="TOP BRASS VODKA">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-80.67162" y="299.55475"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Jody Wins" label="Jody Wins">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="20.541088" y="-308.6334"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Jamie Brewer" label="Jamie Brewer">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-310.93463" y="205.21046"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="AmandaHawkins" label="AmandaHawkins">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="149.63853" y="173.00244"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Hermione Granger" label="Hermione Granger">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-50.07921" y="187.0229"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="アンティークコインのつぶやき" label="アンティークコインのつぶやき">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="403.7419" y="-170.1453"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Sustain-Directions" label="Sustain-Directions">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="58.06951" y="-7.28215"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Owen Jones" label="Owen Jones">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="274.32672" y="-132.0326"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Margaret A Davis" label="Margaret A Davis">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="96.209335" y="-209.08662"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Bandit Aléatoire" label="Bandit Aléatoire">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-184.79782" y="66.95781"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Rolanda Dilorenzo" label="Rolanda Dilorenzo">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-394.68005" y="-135.07477"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Project Vote" label="Project Vote">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="127.387314" y="85.39908"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Keith morrow" label="Keith morrow">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="207.37305" y="-252.86292"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="&#x1f438;-&#x1f95b;Goyim&#x1f95b;" label="&#x1f438;-&#x1f95b;Goyim&#x1f95b;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-604.10925" y="-63.268665"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="aidan nolan" label="aidan nolan">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-118.99849" y="-237.23347"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Liberal To The Core" label="Liberal To The Core">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-495.27353" y="-248.66904"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Christy #DemForce" label="Christy #DemForce">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-130.62547" y="-190.93521"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="JoJo Smith" label="JoJo Smith">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-51.34193" y="-285.93616"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Turo Destroyed-Car" label="Turo Destroyed-Car">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="129.92554" y="-374.8983"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Michelle malone" label="Michelle malone">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="523.139" y="-55.735897"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="#YLWRNGR" label="#YLWRNGR">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="243.89758" y="81.85478"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="MarzTek↪ #Resist &#x1f44a;" label="MarzTek↪ #Resist &#x1f44a;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-227.80211" y="11.211305"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="news fora" label="news fora">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="77.69334" y="-393.7784"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="kcgun13" label="kcgun13">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-328.86447" y="-284.6153"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="skipoc" label="skipoc">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-153.82631" y="-287.48093"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Badri" label="Badri">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="10.79391" y="-115.483086"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Richard Rawson" label="Richard Rawson">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-340.3031" y="163.83444"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Social N Phoenix" label="Social N Phoenix">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="139.4976" y="-305.31586"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="&#x1f1fa;&#x1f1f8;PATRIOTIC AF&#x1f1fa;&#x1f1f8;" label="&#x1f1fa;&#x1f1f8;PATRIOTIC AF&#x1f1fa;&#x1f1f8;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="168.46994" y="47.27579"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Derringer" label="Derringer">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-344.56122" y="92.33101"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Sharkmama" label="Sharkmama">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="346.40143" y="158.17953"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Kevin Patrick O'Neil" label="Kevin Patrick O'Neil">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-300.67227" y="-151.94563"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Director Dave" label="Director Dave">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="471.54495" y="165.36496"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="The Lotus Flower" label="The Lotus Flower">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-61.992905" y="-133.41106"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Kevin Fong" label="Kevin Fong">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="86.350365" y="367.96652"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Bob" label="Bob">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="317.29205" y="200.46724"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Barbara Katz" label="Barbara Katz">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-308.36438" y="73.301056"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Samantha Bradberry" label="Samantha Bradberry">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="306.35718" y="-299.07657"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="CA4IT" label="CA4IT">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-288.38303" y="-5.946226"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="robert_zubrin" label="robert_zubrin">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="186.83574" y="347.65875"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="Dyann LeRoy" label="Dyann LeRoy">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="81.0103" y="-172.11757"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="kashyap parikh" label="kashyap parikh">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="301.8523" y="-35.95856"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="AliActivist" label="AliActivist">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="127.78009" y="107.439384"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="Producer 9-0" label="Producer 9-0">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="402.90128" y="-207.06808"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Tiffany &#x1f48b;" label="Tiffany &#x1f48b;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-193.35478" y="319.0203"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Lorna Burford" label="Lorna Burford">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-89.18247" y="-322.38605"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="monroe✍&#x1f3fc;️" label="monroe✍&#x1f3fc;️">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-85.84643" y="-270.0853"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Joseph Turner" label="Joseph Turner">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-417.7956" y="112.50915"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Al" label="Al">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-190.09406" y="227.15326"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="sydney &#x1f33b;" label="sydney &#x1f33b;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-433.49557" y="264.9428"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Scott Hurtado" label="Scott Hurtado">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-97.13431" y="334.07037"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Immortan Deplorable" label="Immortan Deplorable">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-518.2809" y="-99.52644"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Rob Michalak" label="Rob Michalak">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="167.1467" y="316.68665"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Laura Seward Forczyk" label="Laura Seward Forczyk">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="236.90619" y="367.963"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="ElephantLivesMatter" label="ElephantLivesMatter">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-53.88876" y="11.115937"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="FashNova" label="FashNova">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-433.4145" y="-60.636635"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="&#x1f499;Singtoo@Lion05&#x1f496;&#x1f49b;" label="&#x1f499;Singtoo@Lion05&#x1f496;&#x1f49b;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-58.16494" y="146.4984"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Kyle Tackett" label="Kyle Tackett">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-234.6106" y="-284.42355"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="AWAKENED GIANT®" label="AWAKENED GIANT®">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="519.8863" y="102.223045"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ray Akers" label="Ray Akers">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-168.43593" y="247.85774"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="@ANTITRUMPMVMT" label="@ANTITRUMPMVMT">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="343.89304" y="-273.80762"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Phil Gregory" label="Phil Gregory">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="26.159723" y="280.85883"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="&#x1f4e4; …but emails! &#x1f4e5;" label="&#x1f4e4; …but emails! &#x1f4e5;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="471.3542" y="141.98022"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Cheeto Steverino" label="Cheeto Steverino">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-359.97855" y="-265.65543"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Writer Louis Leung" label="Writer Louis Leung">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-295.34753" y="-193.62155"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Scott2Hill" label="Scott2Hill">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="184.23885" y="-393.40982"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="vladimir ollivier" label="vladimir ollivier">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="4.837622" y="-64.01556"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Dr Miriam Y Vega" label="Dr Miriam Y Vega">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="397.79413" y="64.24969"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Tea Pain" label="Tea Pain">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-7.0740285" y="-382.5214"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Stephen Thomson" label="Stephen Thomson">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="157.42268" y="281.08292"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Tom" label="Tom">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-251.34836" y="171.73212"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Viking Legend" label="Viking Legend">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="224.24298" y="-412.2408"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Dallas Campbell" label="Dallas Campbell">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="103.40384" y="260.9027"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="ianmcnabb08" label="ianmcnabb08">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-229.27142" y="300.23477"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="Yoav Landsman" label="Yoav Landsman">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-6.710561" y="316.41656"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Shazz" label="Shazz">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="22.81999" y="-271.3978"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Medical Marijuana" label="Medical Marijuana">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="147.26562" y="-78.37201"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Weston Parker" label="Weston Parker">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-488.1115" y="-80.73503"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Tony Colleluori" label="Tony Colleluori">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="362.17242" y="99.990295"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ｎ村" label="Ｎ村">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="82.75856" y="231.91792"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Jacob Dean" label="Jacob Dean">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-301.99857" y="225.38683"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Marlene Becker" label="Marlene Becker">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="360.1152" y="308.42844"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Daniel Mendell" label="Daniel Mendell">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="300.11115" y="282.4559"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Jacob Papa" label="Jacob Papa">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-207.73627" y="-170.98053"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Alex Ravlin" label="Alex Ravlin">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="102.10064" y="-263.39697"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Citizen Kate" label="Citizen Kate">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="403.24252" y="200.74188"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Stupid Presidents" label="Stupid Presidents">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="178.52916" y="193.5335"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Unusual Vegan" label="Unusual Vegan">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-60.245758" y="260.75974"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Dave" label="Dave">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="259.4628" y="29.93703"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Emodius Kehesula" label="Emodius Kehesula">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-484.89505" y="34.162544"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Bart Baker" label="Bart Baker">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-117.1119" y="282.4229"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="J. D. Landis" label="J. D. Landis">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="200.47314" y="-228.31296"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Muslim Trump" label="Muslim Trump">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="92.75783" y="-98.7111"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Mauricio García" label="Mauricio García">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-77.316414" y="-98.37423"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Life Rewards Action" label="Life Rewards Action">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="484.1741" y="-114.20737"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Press 2 For English" label="Press 2 For English">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="561.4801" y="76.67145"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="anubhav kulshrestha" label="anubhav kulshrestha">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-338.88824" y="283.3561"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="alf" label="alf">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="240.67221" y="-169.21967"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="verity docherty❤️️&#x1f308;" label="verity docherty❤️️&#x1f308;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-226.16565" y="-117.33212"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ralph A Garrett, Jr." label="Ralph A Garrett, Jr.">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-311.71756" y="247.96576"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Emily #RESIST" label="Emily #RESIST">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="83.93143" y="-244.65839"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Njeanous" label="Njeanous">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-176.09987" y="-137.66371"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Vera" label="Vera">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="218.05278" y="-208.4367"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Josh Ravlin&#x1f573;" label="Josh Ravlin&#x1f573;">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="52.108368" y="-288.27576"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Cheryl" label="Cheryl">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-117.1245" y="114.35172"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Zachary Quinto" label="Zachary Quinto">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-297.15036" y="332.50156"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Aaron Strampach" label="Aaron Strampach">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-214.2422" y="31.223993"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="BasemntDwllngBillion" label="BasemntDwllngBillion">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="147.0478" y="-45.540962"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="In Spite of Trump" label="In Spite of Trump">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-448.43237" y="-213.69647"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Chris kershaw" label="Chris kershaw">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="179.05688" y="-280.65756"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Vinay A. Ramesh" label="Vinay A. Ramesh">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-221.9223" y="-307.78094"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Alex Negron" label="Alex Negron">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="179.09375" y="-349.24265"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="ChildLaborCoalition" label="ChildLaborCoalition">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="261.20688" y="138.78963"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Nick Ravlin" label="Nick Ravlin">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-78.153755" y="-303.3456"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Oliver Morton" label="Oliver Morton">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="73.96017" y="333.6331"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Aaron Harford" label="Aaron Harford">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="163.92043" y="223.72575"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="A to the B" label="A to the B">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-332.50766" y="32.800278"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Wally Passley" label="Wally Passley">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="353.4989" y="120.24566"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="ABIGLYMISTAKE" label="ABIGLYMISTAKE">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-60.229412" y="-254.03989"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Erik Haberman" label="Erik Haberman">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-190.23882" y="-7.3319674"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="NH92276" label="NH92276">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="456.419" y="119.59024"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="Joe Starcher" label="Joe Starcher">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="278.84277" y="-65.198364"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Dallas Piana" label="Dallas Piana">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-198.27109" y="188.57909"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Dr Joel Gilliland" label="Dr Joel Gilliland">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="224.68774" y="155.95116"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Mike Smith" label="Mike Smith">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="183.92375" y="-190.58778"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="hammasshole" label="hammasshole">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="301.29944" y="174.98506"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="TJ Helmstetter" label="TJ Helmstetter">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="175.80971" y="-24.616718"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="CasteelCarrillo" label="CasteelCarrillo">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-316.94226" y="-60.727985"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Karen Gossett" label="Karen Gossett">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-133.12181" y="367.99893"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="GOPI CHANDIRAN" label="GOPI CHANDIRAN">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="297.7935" y="-367.75607"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="fdell3" label="fdell3">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-329.21848" y="138.16394"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="The Areopagus Right" label="The Areopagus Right">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-407.3348" y="-19.697199"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Str8_HugLife" label="Str8_HugLife">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="21.0191" y="166.88126"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Ryan Foland" label="Ryan Foland">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-421.68002" y="-172.03035"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="alsosusieq2" label="alsosusieq2">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="52.81181" y="207.6295"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="MG4NoH8" label="MG4NoH8">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-22.819609" y="-226.24684"></viz:position>
+        <viz:color r="191" g="41" b="0"></viz:color>
+      </node>
+      <node id="Blood Red Patriots" label="Blood Red Patriots">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-132.87527" y="-24.683506"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Fredrick Jacobs" label="Fredrick Jacobs">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="35.01102" y="30.184734"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+      <node id="Common Girl" label="Common Girl">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-310.91135" y="-98.30306"></viz:position>
+        <viz:color r="251" g="241" b="0"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="Ryan Foland" target="kcgun13"></edge>
+      <edge id="1" source="Nathan Muir" target="fdell3"></edge>
+      <edge id="2" source="Rob Michalak" target="robert_zubrin"></edge>
+      <edge id="3" source="Laura Seward Forczyk" target="robert_zubrin"></edge>
+      <edge id="4" source="Director Dave" target="NH92276"></edge>
+      <edge id="5" source="KathrynTheCurious" target="kcgun13"></edge>
+      <edge id="6" source="Project Vote" target="AliActivist"></edge>
+      <edge id="7" source="Keith morrow" target="Scott2Hill"></edge>
+      <edge id="8" source="Odhrán Kavanagh" target="FashNova"></edge>
+      <edge id="9" source="Ben Landis" target="kcgun13"></edge>
+      <edge id="10" source="Vera" target="MattJGNY"></edge>
+      <edge id="11" source="Cheryl Hughes" target="fdell3"></edge>
+      <edge id="12" source="アンティークコインのつぶやき" target="MattJGNY"></edge>
+      <edge id="13" source="Alex Negron" target="Scott2Hill"></edge>
+      <edge id="14" source="anubhav kulshrestha" target="ianmcnabb08"></edge>
+      <edge id="15" source="Bob" target="NH92276"></edge>
+      <edge id="16" source="cassy" target="MG4NoH8"></edge>
+      <edge id="17" source="Dr Miriam Y Vega" target="NH92276"></edge>
+      <edge id="18" source="Unusual Vegan" target="ianmcnabb08"></edge>
+      <edge id="19" source="EntertainmentTonight" target="ianmcnabb08"></edge>
+      <edge id="20" source="&#x1f4e4; …but emails! &#x1f4e5;" target="NH92276"></edge>
+      <edge id="21" source="Rebecca A. Maas" target="FashNova"></edge>
+      <edge id="22" source="Ze" target="FashNova"></edge>
+      <edge id="23" source="aidan nolan" target="kcgun13"></edge>
+      <edge id="24" source="Daniel Brand" target="Scott2Hill"></edge>
+      <edge id="25" source="Richard Rawson" target="fdell3"></edge>
+      <edge id="26" source="&#x1f1fa;&#x1f1f8;PATRIOTIC AF&#x1f1fa;&#x1f1f8;" target="AliActivist"></edge>
+      <edge id="27" source="Blood Red Patriots" target="FashNova"></edge>
+      <edge id="28" source="Phil Gregory" target="robert_zubrin"></edge>
+      <edge id="29" source="In Spite of Trump" target="kcgun13"></edge>
+      <edge id="30" source="SocialInTempe" target="Scott2Hill"></edge>
+      <edge id="31" source="Owen Jones" target="MattJGNY"></edge>
+      <edge id="32" source="Medical Marijuana" target="MattJGNY"></edge>
+      <edge id="33" source="Dallas Campbell" target="robert_zubrin"></edge>
+      <edge id="34" source="Jay McKenzie" target="NH92276"></edge>
+      <edge id="35" source="Kazuhiro Yoshinori" target="MG4NoH8"></edge>
+      <edge id="36" source="alf" target="MattJGNY"></edge>
+      <edge id="37" source="TJ Helmstetter" target="AliActivist"></edge>
+      <edge id="38" source="Producer 9-0" target="MattJGNY"></edge>
+      <edge id="39" source="Paul Snow" target="Scott2Hill"></edge>
+      <edge id="40" source="LE VTC TCHATCHEUR" target="Scott2Hill"></edge>
+      <edge id="41" source="CasteelCarrillo" target="FashNova"></edge>
+      <edge id="42" source="&#x1f438;-&#x1f95b;Goyim&#x1f95b;" target="FashNova"></edge>
+      <edge id="43" source="Fredrick Jacobs" target="AliActivist"></edge>
+      <edge id="44" source="STOP-Homophobia.com" target="kcgun13"></edge>
+      <edge id="45" source="Mike Smith" target="MG4NoH8"></edge>
+      <edge id="46" source="My New Gravity" target="kcgun13"></edge>
+      <edge id="47" source="Yoav Landsman" target="robert_zubrin"></edge>
+      <edge id="48" source="Stephen Thomson" target="robert_zubrin"></edge>
+      <edge id="49" source="Str8_HugLife" target="AliActivist"></edge>
+      <edge id="50" source="iSoccerAm" target="kcgun13"></edge>
+      <edge id="51" source="kashyap parikh" target="MattJGNY"></edge>
+      <edge id="52" source="Ｎ村" target="robert_zubrin"></edge>
+      <edge id="53" source="Christy #DemForce" target="MG4NoH8"></edge>
+      <edge id="54" source="Mauricio García" target="MG4NoH8"></edge>
+      <edge id="55" source="funny tweets" target="FashNova"></edge>
+      <edge id="56" source="Dr Joel Gilliland" target="AliActivist"></edge>
+      <edge id="57" source="Citizen Kate" target="NH92276"></edge>
+      <edge id="58" source="Tiffany &#x1f48b;" target="ianmcnabb08"></edge>
+      <edge id="59" source="Heather Haney" target="fdell3"></edge>
+      <edge id="60" source="P.E.S." target="robert_zubrin"></edge>
+      <edge id="61" source="TOP BRASS VODKA" target="ianmcnabb08"></edge>
+      <edge id="62" source="Cheeto Steverino" target="kcgun13"></edge>
+      <edge id="63" source="@ANTITRUMPMVMT" target="Scott2Hill"></edge>
+      <edge id="64" source="The Commonwealth" target="MG4NoH8"></edge>
+      <edge id="65" source="Emily #RESIST" target="MG4NoH8"></edge>
+      <edge id="66" source="Amanda Springer" target="MattJGNY"></edge>
+      <edge id="67" source="Jody Wins" target="Scott2Hill"></edge>
+      <edge id="68" source="Volound" target="robert_zubrin"></edge>
+      <edge id="69" source="XtraNastyWoman&#x1f1fa;&#x1f1f8;" target="MattJGNY"></edge>
+      <edge id="70" source="Ford" target="robert_zubrin"></edge>
+      <edge id="71" source="Njeanous" target="MG4NoH8"></edge>
+      <edge id="72" source="ChildLaborCoalition" target="AliActivist"></edge>
+      <edge id="73" source="A10 Warthog" target="AliActivist"></edge>
+      <edge id="74" source="Chad Aaron S" target="MattJGNY"></edge>
+      <edge id="75" source="AWAKENED GIANT®" target="NH92276"></edge>
+      <edge id="76" source="Press 2 For English" target="NH92276"></edge>
+      <edge id="77" source="Social N Phoenix" target="Scott2Hill"></edge>
+      <edge id="78" source="B. Janine Morison" target="fdell3"></edge>
+      <edge id="79" source="news fora" target="Scott2Hill"></edge>
+      <edge id="80" source="Pro-Choice Resources" target="AliActivist"></edge>
+      <edge id="81" source="Al" target="ianmcnabb08"></edge>
+      <edge id="82" source="Harjinder S Kukreja" target="AliActivist"></edge>
+      <edge id="83" source="ETAN" target="AliActivist"></edge>
+      <edge id="84" source="skipoc" target="kcgun13"></edge>
+      <edge id="85" source="Liberal To The Core" target="kcgun13"></edge>
+      <edge id="86" source="Shaniqua" target="NH92276"></edge>
+      <edge id="87" source="Muslim Trump" target="MG4NoH8"></edge>
+      <edge id="88" source="Joe Starcher" target="MattJGNY"></edge>
+      <edge id="89" source="Sharkmama" target="NH92276"></edge>
+      <edge id="90" source="Rolanda Dilorenzo" target="kcgun13"></edge>
+      <edge id="91" source="Shazz" target="MG4NoH8"></edge>
+      <edge id="92" source="YellieKat" target="fdell3"></edge>
+      <edge id="93" source="monroe✍&#x1f3fc;️" target="kcgun13"></edge>
+      <edge id="94" source="Curt Werner" target="MG4NoH8"></edge>
+      <edge id="95" source="Turo Destroyed-Car" target="Scott2Hill"></edge>
+      <edge id="96" source="Lorna Burford" target="kcgun13"></edge>
+      <edge id="97" source="Dave" target="NH92276"></edge>
+      <edge id="98" source="Dyann LeRoy" target="MG4NoH8"></edge>
+      <edge id="99" source="GOPI CHANDIRAN" target="Scott2Hill"></edge>
+      <edge id="100" source="Immortan Deplorable" target="FashNova"></edge>
+      <edge id="101" source="Tea Pain" target="Scott2Hill"></edge>
+      <edge id="102" source="Tyler Large" target="NH92276"></edge>
+      <edge id="103" source="TheDailyLiberal" target="MattJGNY"></edge>
+      <edge id="104" source="Fete" target="MattJGNY"></edge>
+      <edge id="105" source="Barbara Katz" target="fdell3"></edge>
+      <edge id="106" source="Common Girl" target="FashNova"></edge>
+      <edge id="107" source="Sustain-Directions" target="AliActivist"></edge>
+      <edge id="108" source="loony" target="robert_zubrin"></edge>
+      <edge id="109" source="Craig Rozniecki" target="MattJGNY"></edge>
+      <edge id="110" source="Zachary Quinto" target="ianmcnabb08"></edge>
+      <edge id="111" source="BasemntDwllngBillion" target="MattJGNY"></edge>
+      <edge id="112" source="Tom" target="fdell3"></edge>
+      <edge id="113" source="#YLWRNGR" target="AliActivist"></edge>
+      <edge id="114" source="Ua Position" target="MattJGNY"></edge>
+      <edge id="115" source="ElephantLivesMatter" target="AliActivist"></edge>
+      <edge id="116" source="Kevin Patrick O'Neil" target="kcgun13"></edge>
+      <edge id="117" source="&#x1f499;Singtoo@Lion05&#x1f496;&#x1f49b;" target="AliActivist"></edge>
+      <edge id="118" source="Cheryl" target="fdell3"></edge>
+      <edge id="119" source="Michelle malone" target="MattJGNY"></edge>
+      <edge id="120" source="Kyle Tackett" target="kcgun13"></edge>
+      <edge id="121" source="Jamie Brewer" target="ianmcnabb08"></edge>
+      <edge id="122" source="Josh Ravlin&#x1f573;" target="Scott2Hill"></edge>
+      <edge id="123" source="ABIGLYMISTAKE" target="MG4NoH8"></edge>
+      <edge id="124" source="Scott Hurtado" target="ianmcnabb08"></edge>
+      <edge id="125" source="Margaret A Davis" target="MG4NoH8"></edge>
+      <edge id="126" source="The Areopagus Right" target="FashNova"></edge>
+      <edge id="127" source="Samantha Bradberry" target="Scott2Hill"></edge>
+      <edge id="128" source="kαylα" target="ianmcnabb08"></edge>
+      <edge id="129" source="Viking Legend" target="Scott2Hill"></edge>
+      <edge id="130" source="A to the B" target="fdell3"></edge>
+      <edge id="131" source="JoJo Smith" target="MG4NoH8"></edge>
+      <edge id="132" source="Hermione Granger" target="fdell3"></edge>
+      <edge id="133" source="verity docherty❤️️&#x1f308;" target="FashNova"></edge>
+      <edge id="134" source="Amol Acharya" target="robert_zubrin"></edge>
+      <edge id="135" source="Life Rewards Action" target="MattJGNY"></edge>
+      <edge id="136" source="Jeremiah Charles" target="robert_zubrin"></edge>
+      <edge id="137" source="Wally Passley" target="NH92276"></edge>
+      <edge id="138" source="hammasshole" target="NH92276"></edge>
+      <edge id="139" source="Erik Haberman" target="FashNova"></edge>
+      <edge id="140" source="Writer Louis Leung" target="kcgun13"></edge>
+      <edge id="141" source="AmandaHawkins" target="AliActivist"></edge>
+      <edge id="142" source="CA4IT" target="FashNova"></edge>
+      <edge id="143" source="The Lotus Flower" target="MG4NoH8"></edge>
+      <edge id="144" source="Ted Schantz" target="robert_zubrin"></edge>
+      <edge id="145" source="Badri" target="MG4NoH8"></edge>
+      <edge id="146" source="#TBF #F4F  シ" target="MattJGNY"></edge>
+      <edge id="147" source="Kennedy" target="MG4NoH8"></edge>
+      <edge id="148" source="Taylor Egly" target="FashNova"></edge>
+      <edge id="149" source="BalboCat|MarineLepen" target="FashNova"></edge>
+      <edge id="150" source="Dallas Piana" target="ianmcnabb08"></edge>
+      <edge id="151" source="philip harris" target="kcgun13"></edge>
+      <edge id="152" source="Jacob Papa" target="kcgun13"></edge>
+      <edge id="153" source="MarzTek↪ #Resist &#x1f44a;" target="fdell3"></edge>
+      <edge id="154" source="Jacob Dean" target="ianmcnabb08"></edge>
+      <edge id="155" source="Downtown Nashville" target="ianmcnabb08"></edge>
+      <edge id="156" source="Trigger Me Happy" target="FashNova"></edge>
+      <edge id="157" source="Vinay A. Ramesh" target="kcgun13"></edge>
+      <edge id="158" source="Ukrainada_" target="NH92276"></edge>
+      <edge id="159" source="CJ Townsend" target="fdell3"></edge>
+      <edge id="160" source="Emodius Kehesula" target="FashNova"></edge>
+      <edge id="161" source="J. D. Landis" target="Scott2Hill"></edge>
+      <edge id="162" source="(((Shining City)))" target="NH92276"></edge>
+      <edge id="163" source="PACC" target="NH92276"></edge>
+      <edge id="164" source="You and Me..(^_^)" target="ianmcnabb08"></edge>
+      <edge id="165" source="Bandit Aléatoire" target="fdell3"></edge>
+      <edge id="166" source="Nick Ravlin" target="Scott2Hill"></edge>
+      <edge id="167" source="Ray Akers" target="ianmcnabb08"></edge>
+      <edge id="168" source="Chris kershaw" target="Scott2Hill"></edge>
+      <edge id="169" source="Alex Ravlin" target="Scott2Hill"></edge>
+      <edge id="170" source="Rennie❄" target="fdell3"></edge>
+      <edge id="171" source="Aaron Strampach" target="fdell3"></edge>
+      <edge id="172" source="Joseph Turner" target="fdell3"></edge>
+      <edge id="173" source="Diane Dibenedetto" target="ianmcnabb08"></edge>
+      <edge id="174" source="Charlie" target="FashNova"></edge>
+      <edge id="175" source="Ralph A Garrett, Jr." target="ianmcnabb08"></edge>
+      <edge id="176" source="Justthefacts" target="fdell3"></edge>
+      <edge id="177" source="Paying Attention" target="NH92276"></edge>
+      <edge id="178" source="juniormint73" target="fdell3"></edge>
+      <edge id="179" source="Stupid Presidents" target="AliActivist"></edge>
+      <edge id="180" source="Samuel" target="NH92276"></edge>
+      <edge id="181" source="Aaron Harford" target="robert_zubrin"></edge>
+      <edge id="182" source="The Tracy&amp;Craig Show" target="MattJGNY"></edge>
+      <edge id="183" source="Marlene Becker" target="robert_zubrin"></edge>
+      <edge id="184" source="Tony Colleluori" target="NH92276"></edge>
+      <edge id="185" source="Karen Gossett" target="ianmcnabb08"></edge>
+      <edge id="186" source="Oliver Morton" target="robert_zubrin"></edge>
+      <edge id="187" source="Derringer" target="fdell3"></edge>
+      <edge id="188" source="alsosusieq2" target="robert_zubrin"></edge>
+      <edge id="189" source="PC: United" target="MG4NoH8"></edge>
+      <edge id="190" source="Bart Baker" target="ianmcnabb08"></edge>
+      <edge id="191" source="Daniel Mendell" target="robert_zubrin"></edge>
+      <edge id="192" source="vladimir ollivier" target="MG4NoH8"></edge>
+      <edge id="193" source="Kevin Fong" target="robert_zubrin"></edge>
+      <edge id="194" source="sydney &#x1f33b;" target="ianmcnabb08"></edge>
+      <edge id="195" source="Helen Lilley" target="AliActivist"></edge>
+      <edge id="196" source="Eric Swalwell" target="AliActivist"></edge>
+      <edge id="197" source="Weston Parker" target="FashNova"></edge>
+      <edge id="198" source="MyFreeConcert NY" target="AliActivist"></edge>
+      <edge id="199" source="Wild Colonial Boy ☨" target="FashNova"></edge>
+    </edges>
+  </graph>
+</gexf>
