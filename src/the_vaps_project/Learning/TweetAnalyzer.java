@@ -9,13 +9,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
 import org.openide.util.Exceptions;
-import the_vaps_project.Scribe;
 
 /**
  *
@@ -61,14 +56,7 @@ public class TweetAnalyzer {
         ponctuation = false;
         negation = false;
         score = calcScore();
-//        ponctuation(tweet);
-//                if (score == 0) {
-//            System.out.println(tweet + " -> neutre");
-//        } else if (score > 0) {
-//            System.out.println(tweet + " -> positif");
-//        } else {
-//            System.out.println(tweet + " -> negatif");
-//        }
+        ponctuation(tweet);
     }
     
     private void ponctuation(String tweet) {
@@ -77,20 +65,11 @@ public class TweetAnalyzer {
         }
         
     }
-
-//    private boolean contient (String mots[], String mot)
-//    {
-//        for (String mot1 : mots)
-//            if (mot.equals(mot1))
-//                return true;
-//        return false;
-//    }
-//    
+   
     private int calcScore() {
         BufferedReader negation_word, negative_word, positive_word = null;
         String ligne;
         int score = 0;
-
 
         try {
             negation_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negation-word.txt"));
@@ -98,8 +77,6 @@ public class TweetAnalyzer {
             positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
 
             for (int i = 0; i < mots.length; ++i) {
-//                System.out.println(mots[i] + " " + score);
-
                 while ((ligne = negative_word.readLine()) != null) {
                     if (mots[i].equalsIgnoreCase(ligne)) {
                         ++nbMotsNegatifs;
@@ -134,7 +111,6 @@ public class TweetAnalyzer {
                         }
                         ++i;
                     }
-
                 }
                 positive_word.close();
                 negation_word.close();
@@ -143,21 +119,12 @@ public class TweetAnalyzer {
                 negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negative-words.txt"));
                 positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
             }
-
-//            while ((ligne = negation_word.readLine()) != null) {
-//                
-//                
-//                
-//                
-//            }
             negation_word.close();
         } catch (FileNotFoundException ex) {
             Exceptions.printStackTrace(ex);
         } catch (IOException ex) {
             Exceptions.printStackTrace(ex);
         }
-
         return score;
     }
-
 }

@@ -4885,3 +4885,5 @@ weak-willed
 #NeverTrump
 #ImWithHer
 #trumpprotest
+#VoteClinton
+#VoteHillary

@@ -42,9 +42,7 @@ public class MachineLearning {
             Scribe s = new Scribe();
         s.detruireFichier("src\\the_vaps_project\\Learning\\tweet.arff");
         s.ouvrir("src\\the_vaps_project\\Learning\\tweet.arff");
-        s.ecrire("@RELATION tweet\n"
-                + "\n"
-                + "\n"
+        s.ecrire("@RELATION tweet\n\n"
                 + "@ATTRIBUTE motPositif Numeric\n"
                 + "@ATTRIBUTE motNegatif Numeric\n"
                 + "@ATTRIBUTE Negation { TRUE, FALSE }   \n"
@@ -64,7 +62,6 @@ s.fermer();
             System.out.println("Erreur d'entr�e/sortie");
             System.out.println("lors de l'appel � construteur.parse(xml)");
         }
-        
     }
 
     public static void printListe(Scribe s, NodeList liste) {
