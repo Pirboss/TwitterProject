@@ -72,6 +72,7 @@ public class The_vaps_project {
         TwitterCriteria criteria = null;
         Tweet t = null;
         criteria = TwitterCriteria.create()
+
                 .setMaxTweets(10)
                 .setUntil("2016-11-08")
                 .setQuerySearch("#NeverTrump");
@@ -96,6 +97,8 @@ public class The_vaps_project {
             s.ecrire("\t\t<smileys>"+t.getSmileys()+"</smileys>\n");
             s.ecrire("\t\t<polarite>"+t.getPolarite()+"</polarite>\n");
             s.ecrire("\t</tweet>\n");
+            
+            corpus.ecrire(s.filtrerTexte(t.getText() + "\n"));
         }
         s.ecrire("</tweets>");
         s.fermer();*/
@@ -275,7 +278,7 @@ public class The_vaps_project {
         
         PreviewJFrame pr = new PreviewJFrame();
         pr.script();*/
-                
+
     }
 
     
