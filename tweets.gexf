@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.2draft/gexf.xsd" version="1.2" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd">
+	<meta lastmodifieddate="2017-02-17">
+		<creator>Pirboss</creator>
+		<description>Test v1</description>
+	</meta>
+	<graph defaultedgetype="directed" mode="static">
+		<nodes>
+			<node id="0" label="scottbix"/>
+			<node id="1" label="MG4NoH8"/>
+			<node id="2" label="NH92276"/>
+			<node id="3" label="washingtonpost"/>
+			<node id="4" label="Scott2Hill"/>
+			<node id="5" label="Brenda_Duk"/>
+			<node id="6" label="kcgun13"/>
+			<node id="7" label="robert_zubrin"/>
+			<node id="8" label="realDenaldTrump"/>
+			<node id="9" label="ianmcnabb08"/>
+			<node id="10" label="AliActivist"/>
+			<node id="11" label="MattJGNY"/>
+			<node id="12" label="Bakari_Sellers"/>
+			<node id="13" label="FashNova"/>
+		</nodes>
+		<edges>
+			<edge id="0" source="5" target="12" weight="1"/>
+			<edge id="1" source="13" target="3" weight="1"/>
+			<edge id="2" source="6" target="8" weight="1"/>
+			<edge id="3" source="5" target="0" weight="1"/>
+		</edges>
+	</graph>
+</gexf>
