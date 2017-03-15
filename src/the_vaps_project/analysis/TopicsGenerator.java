@@ -31,6 +31,11 @@ public class TopicsGenerator {
     private static final String pathPhi = "src/resources/corpus.phi";
     private static final String pathTheta = "src/resources/corpus.theta";
     
+    //nbITerations = 50 pour test rapide, en pratique: entre 1000 et 2000
+    private static final int nbIterations = 200;
+    private static final int nbTopics = 49;
+    private static final int nbWordsPerTopic = 20;
+    
     private double perplexite = 0;
     
     /**
@@ -61,19 +66,6 @@ public class TopicsGenerator {
 
         InstanceList instances = new InstanceList (new SerialPipes(pipeList));
         
-        //Reader fileReader = new InputStreamReader(new FileInputStream(new File(args[0])), "UTF-8");
-        //Reader fileReader = new StringReader(src);
-        /*
-        Reader fileReader;
-        try {
-            fileReader = new InputStreamReader(new FileInputStream(new File(filepath)), "UTF-8");
-            instances.addThruPipe(new CsvIterator (fileReader, Pattern.compile("^(\\S*)[\\s,]*(\\S*)[\\s,]*(.*)$"), 3, 2, 1)); // data, label, name fields
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TopicsGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(TopicsGenerator.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        */
         instances.addThruPipe(new CsvIterator (corpus, Pattern.compile("^(\\S*)[\\s,]*(\\S*)[\\s,]*(.*)$"), 3, 2, 1)); // data, label, name fields
         
         // Create a model with 100 topics, alpha_t = 0.01, beta_w = 0.01
@@ -81,7 +73,7 @@ public class TopicsGenerator {
         //  the second is the parameter for a single dimension of the Dirichlet prior.
         int numTopics = nTopics;
         ParallelTopicModel model = new ParallelTopicModel(numTopics, 1.0, 0.01);
-
+        
         model.addInstances(instances);
 
         // Use two parallel samplers, which each look at one half the corpus and combine
@@ -90,7 +82,7 @@ public class TopicsGenerator {
 
         // Run the model for 50 iterations and stop (this is for testing only, 
         //  for real applications, use 1000 to 2000 iterations)
-        model.setNumIterations(50);
+        model.setNumIterations(nbIterations);
         try {
             model.estimate();
         } catch (IOException ex) {
@@ -136,27 +128,6 @@ public class TopicsGenerator {
             }
         }
         
-        /*
-        //The same but sorted by topic distribution
-        
-        System.out.println("\n\n################################\n\n");
-        java.util.Arrays.sort(topicDistribution);
-        for (int topic = 0; topic < numTopics; topic++) {
-            
-            Iterator<IDSorter> iterator = topicSortedWords.get(topic).iterator();
-            
-            out = new Formatter(new StringBuilder(), Locale.US);
-            out.format("%d\t%.3f\t", topic, topicDistribution[topic]);
-            int rank = 0;
-            while (iterator.hasNext() && rank < nWords) {
-                IDSorter idCountPair = iterator.next();
-                out.format("%s (%.0f) ", dataAlphabet.lookupObject(idCountPair.getID()), idCountPair.getWeight());
-                rank++;
-            }
-            System.out.println(out);
-        }
-        */
-        
         //generate topics list
         for (int topic = 0; topic < numTopics; topic++) {
             Iterator<IDSorter> iterator = topicSortedWords.get(topic).iterator();
@@ -195,29 +166,21 @@ public class TopicsGenerator {
         sPhi.fermer();
         sTheta.fermer();
         
-        perplexite = PerplexityMeasure.perplexity(pathPhi, pathTheta);
+        try {
+            perplexite = PerplexityMeasure.perplexity(pathPhi, pathTheta);
+        } catch (Exception e) {}
         
-        
-        System.out.println("\nLa perplexité pour "+nTopics+" topics est : " 
-                + perplexite + "\n");
+        //System.out.println("\nLa perplexité pour "+nTopics+" topics est : " + perplexite + "\n");
         
         return output;
     }
     
     public static void main(String args[]) throws IOException {
-        /*
-        for (Topic topic : tg.getTopics(CorpusReader.getCorpusLemmatized("src/resources/corpus.txt"), 20, 5)) {
-            System.out.println(topic.getName() + "\t" + topic.getWords());
-        }
-        */
         
         TopicsGenerator tg = new TopicsGenerator();
-        /*
-        for (Topic topic : tg.getTopics(CorpusReader.getCorpus(pathCorpus), 76, 10)) {
+        for (Topic topic : tg.getTopics(CorpusReader.getCorpus(pathCorpus), nbTopics, nbWordsPerTopic)) {
             System.out.println(topic.getName() + "\t" + topic.getWords());
         }
-        */
-        System.out.println("NbTopic ideal = " + tg.calculNbTopicIdeal());
     }
     
     /**
@@ -230,17 +193,17 @@ public class TopicsGenerator {
         int nbTopic = 1;
         double currentBest = 0;
         
-        boolean isOk;
+        int nbRetry;
         
         for (int i=1; i<=100; i++) {
+            nbRetry = 0;
             
             /* Parfois le résultat de Mallet est incompatible avec le code de PerplexityMeasure
             pour le moment j'ai rien de mieux que de relancer Mallet */
-            isOk = false;
-            while (!isOk) {
+            while (nbRetry < 2) {
                 try {
-                    getTopics(CorpusReader.getCorpus(pathCorpus), i, 10);
-                    isOk = true;
+                    getTopics(CorpusReader.getCorpus(pathCorpus), i, nbWordsPerTopic);
+                    nbRetry++;
                 }catch(Exception e) {}
             }
             
