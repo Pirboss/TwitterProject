@@ -71,40 +71,73 @@ public class The_vaps_project {
          }*/
         TwitterCriteria criteria = null;
         Tweet t = null;
-        criteria = TwitterCriteria.create()
-                .setMaxTweets(10)
-                .setUntil("2016-11-08")
-                .setQuerySearch("#NeverTrump");
-        /*Scribe s = new Scribe();
-        s.detruireFichier("tweets.xml");
-        s.ouvrir("tweets.xml");
+        int annee = 2016;
+        int mois = 11;
+        int jour = 8;
+        int nbr = 200;
+        Scribe ss = new Scribe();
+        ss.detruireFichier("tweetsTXT.txt");
+        ss.ouvrir("tweetsTXT.txt");
+
+        Scribe s = new Scribe();
+        s.detruireFichier("tweetsXML.xml");
+        s.ouvrir("tweetsXML.xml");
         s.ecrire("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
         s.ecrire("<tweets>\n");
-        for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
-            t = TweetManager.getTweets(criteria).get(i);
-            s.ecrire("\t<tweet>\n");
-            s.ecrire("\t\t<text>"+t.getText()+"</text>\n");
-            s.ecrire("\t\t<hashtags>"+t.getHashtags()+"</hashtags>\n");
-            s.ecrire("\t\t<date>"+t.getDate()+"</date>\n");
-            s.ecrire("\t\t<username>"+t.getUsername()+"</username>\n");
-            s.ecrire("\t\t<retweets>"+t.getRetweets()+"</retweets>\n");
-            s.ecrire("\t\t<favorites>"+t.getFavorites()+"</favorites>\n");
-            s.ecrire("\t\t<id>"+t.getId()+"</id>\n");
-            s.ecrire("\t\t<geo>"+t.getGeo()+"</geo>\n");
-            s.ecrire("\t\t<mentions>"+t.getMentions()+"</mentions>\n");
-            s.ecrire("\t\t<permalink>"+t.getPermalink()+"</permalink>\n");
-            s.ecrire("\t\t<smileys>"+t.getSmileys()+"</smileys>\n");
-            s.ecrire("\t\t<polarite>"+t.getPolarite()+"</polarite>\n");
-            s.ecrire("\t</tweet>\n");
+        
+        for(int k=0; k<400; k++){
+            
+            
+            criteria = TwitterCriteria.create()
+                    .setMaxTweets(25)
+                    .setUntil(annee+"-"+mois+"-"+jour)
+                    .setQuerySearch("#TrumpWins OR #TrumpLandslide OR #TrumpPresident OR #TrumpMovement OR #TrumpNation OR #TrumpTrain OR #MakeAmericaGreatAgain OR #NeverTrump OR #ImWithHer OR #trumpprotest OR #voteclinton OR #votehillary OR #dumptrump");
+
+            
+            for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
+                System.out.println(k*25+i);
+                t = TweetManager.getTweets(criteria).get(i);
+                s.ecrire("\t<tweet>\n");
+                s.ecrire("\t\t<text>"+t.getText().replace("&", "&amp;")+"</text>\n");
+                /*s.ecrire("\t\t<hashtags>"+t.getHashtags()+"</hashtags>\n");
+                s.ecrire("\t\t<date>"+t.getDate()+"</date>\n");
+                s.ecrire("\t\t<username>"+t.getUsername()+"</username>\n");
+                s.ecrire("\t\t<retweets>"+t.getRetweets()+"</retweets>\n");
+                s.ecrire("\t\t<favorites>"+t.getFavorites()+"</favorites>\n");
+                s.ecrire("\t\t<id>"+t.getId()+"</id>\n");
+                s.ecrire("\t\t<geo>"+t.getGeo()+"</geo>\n");
+                s.ecrire("\t\t<mentions>"+t.getMentions()+"</mentions>\n");
+                s.ecrire("\t\t<permalink>"+t.getPermalink()+"</permalink>\n");
+                s.ecrire("\t\t<smileys>"+t.getSmileys()+"</smileys>\n");
+                s.ecrire("\t\t<polarite>"+t.getPolarite()+"</polarite>\n");*/
+                s.ecrire("\t</tweet>\n");
+                ss.ecrire(t.getText());
+            }
+            jour--;
+            if(jour==0){
+                mois--;
+                if(mois==1){
+                    annee--;
+                    jour = 30;
+                    mois = 12;
+                }else if(mois==2){
+                    jour=27;
+                }else{
+                    jour=30;
+                }
+            }
         }
         s.ecrire("</tweets>");
-        s.fermer();*/
+        s.fermer();
+        ss.fermer();
+            
+        
         
         /* SUPER SITE D'EXEMPLES
         https://github.com/yusuke/twitter4j/tree/master/twitter4j-examples/src/main/java/twitter4j/examples*/
         
         /*PARTIE GRAPHE DES RETWEETS*/
-        Set<String> nameOfUsers = new HashSet<>();
+        /*Set<String> nameOfUsers = new HashSet<>();
         for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
             t = TweetManager.getTweets(criteria).get(i);
             System.out.println(t.getUsername());
@@ -120,28 +153,11 @@ public class The_vaps_project {
         TwitterFactory tf = new TwitterFactory(cb.build());
         twitter4j.Twitter twitter = tf.getInstance();
         
-        /*String[] screenNames = nameOfUsers.toArray(new String[0]);
-        ResponseList<User> usersNames;
-        long cursor = -1;
-        IDs ids;
-        try {
-            usersNames = twitter.lookupUsers(screenNames);
-            for(User u: usersNames){
-                System.out.println(u.getId()+" "+u.getName()+" "+u.getName());
-                ids = twitter.getFollowersIDs("username", cursor);
-                twitter.getFollowers
-            }
-                        
-            
-        } catch (TwitterException ex) {
-            Exceptions.printStackTrace(ex);
-        }*/
         
         
         Set<DuoKey> utilisateurs = new HashSet<>();
         Set<DuoKey> liens = new HashSet<>();
         
-        //User us;
 
         try{
             int nbpages = 0;
@@ -150,11 +166,10 @@ public class The_vaps_project {
             ArrayList<User> listeFollowers = new ArrayList<User>();
             for(String s: nameOfUsers){
                 if(!utilisateurs.contains(new DuoKey(s,"auteurTweet"))){
-                    
+                    cursor = -1;
                 
                     utilisateurs.add(new DuoKey(s,"auteurTweet"));
 
-                    //listeFollowersTemp = twitter.getFollowersList(s, -1);
                     do {
                         TimeUnit.MINUTES.sleep(1);
                         listeFollowersTemp = twitter.getFollowersList(s, cursor);
@@ -210,7 +225,7 @@ public class The_vaps_project {
         
         
         PreviewJFrame p = new PreviewJFrame();
-        p.script();
+        p.script();*/
         
         
         
