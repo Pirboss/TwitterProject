@@ -69,4 +69,23 @@ public class Scribe {
             ioe.printStackTrace();
         }
     }
+    
+    /**
+     * Filtre le texte d'un tweet pour l'analyse
+     * @param texte
+     * @return le texte sans les URLs et des espaces avec les @ et #
+     */
+    public static String filtrerTexte(String texte) {
+        String str = texte;
+        
+        str = str.replaceAll("https?://\\S+\\s?", "");
+        str = str.replaceAll("http?://\\S+\\s?", "");
+        str = str.replaceAll("pic.twitter\\S+\\s?", "");
+        str = str.replaceAll("@", " @");
+        str = str.replaceAll("#", " #");
+        str = str.replaceAll("...", " ");
+        str = str.replaceAll("'s", " ");
+        
+        return str;
+    }
 }
