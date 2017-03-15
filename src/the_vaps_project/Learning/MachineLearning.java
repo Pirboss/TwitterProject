@@ -26,32 +26,25 @@ public class MachineLearning {
     public static void main(String[] args) {
 
         try {
-            // cr�ation d'une fabrique de documents
             DocumentBuilderFactory fabrique = DocumentBuilderFactory.newInstance();
-
-            // cr�ation d'un constructeur de documents
             DocumentBuilder constructeur = fabrique.newDocumentBuilder();
-
-            // lecture du contenu d'un fichier XML avec DOM
             File xml = new File(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\tweets.xml");
             Document document = constructeur.parse(xml);
-
-            //traitement du document
             Element racine = document.getDocumentElement();
             NodeList maliste = racine.getChildNodes();
             Scribe s = new Scribe();
-        s.detruireFichier("src\\the_vaps_project\\Learning\\tweet.arff");
-        s.ouvrir("src\\the_vaps_project\\Learning\\tweet.arff");
-        s.ecrire("@RELATION tweet\n\n"
-                + "@ATTRIBUTE motPositif Numeric\n"
-                + "@ATTRIBUTE motNegatif Numeric\n"
-                + "@ATTRIBUTE Negation { TRUE, FALSE }   \n"
-                + "@ATTRIBUTE Ponctuation { TRUE, FALSE }  \n"
-                + "@ATTRIBUTE class {Positif, Negatif, Neutre}\n"
-                + "\n"
-                + "@DATA\n\n");
+            s.detruireFichier("src\\the_vaps_project\\Learning\\tweet.arff");
+            s.ouvrir("src\\the_vaps_project\\Learning\\tweet.arff");
+            s.ecrire("@RELATION tweet\n\n"
+                    + "@ATTRIBUTE motPositif Numeric\n"
+                    + "@ATTRIBUTE motNegatif Numeric\n"
+                    + "@ATTRIBUTE Negation { TRUE, FALSE }   \n"
+                    + "@ATTRIBUTE Ponctuation { TRUE, FALSE }  \n"
+                    + "@ATTRIBUTE class {Positif, Negatif, Neutre}\n"
+                    + "\n"
+                    + "@DATA\n\n");
             printListe(s, maliste);
-s.fermer();
+            s.fermer();
         } catch (ParserConfigurationException pce) {
             System.out.println("Erreur de configuration du parseur DOM");
             System.out.println("lors de l'appel � fabrique.newDocumentBuilder();");
@@ -65,19 +58,13 @@ s.fermer();
     }
 
     public static void printListe(Scribe s, NodeList liste) {
-        
-                
-        
 
-        
-        
         for (int i = 0; i < liste.getLength(); i++) {
             if (liste.item(i).getNodeType() == Node.ELEMENT_NODE) {
 
-                if (liste.item(i).getNodeName().equals("text"))
-                {
+                if (liste.item(i).getNodeName().equals("text")) {
                     TweetAnalyzer ta = new TweetAnalyzer(liste.item(i).getTextContent());
-                            String classe;
+                    String classe;
                     if (ta.getScore() == 0) {
                         classe = "Neutre";
                     } else if (ta.getScore() > 0) {
@@ -85,14 +72,10 @@ s.fermer();
                     } else {
                         classe = "Negatif";
                     }
-
                     s.ecrire(ta.getNbMotsPositif() + "," + ta.getNbMotsNegatifs() + "," + ta.isNegation() + "," + ta.isPonctuation() + "," + classe + "\n");
                 }
-
             }
             printListe(s, liste.item(i).getChildNodes());
         }
-        
     }
-
 }

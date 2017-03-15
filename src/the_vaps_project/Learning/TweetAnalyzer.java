@@ -47,7 +47,6 @@ public class TweetAnalyzer {
         else 
             return "FALSE";
     }
-    List vector;
 
     public TweetAnalyzer(String tweet) {
         mots = tweet.split(" ");
@@ -76,7 +75,8 @@ public class TweetAnalyzer {
             negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negative-words.txt"));
             positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
 
-            for (int i = 0; i < mots.length; ++i) {
+            int i = 0;
+            for (i = 0; i < mots.length; ++i) {
                 while ((ligne = negative_word.readLine()) != null) {
                     if (mots[i].equalsIgnoreCase(ligne)) {
                         ++nbMotsNegatifs;
@@ -91,20 +91,20 @@ public class TweetAnalyzer {
                 }
                 while ((ligne = negation_word.readLine()) != null) {
                     
-                    if (mots[i].equalsIgnoreCase(ligne)) {
+                    if (mots.length > i+1 && mots[i].equalsIgnoreCase(ligne)) {
                         negation = true;
                         positive_word.close();
                         negative_word.close();
                         negative_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\negative-words.txt"));
                         positive_word = new BufferedReader(new FileReader(System.getProperty("user.dir") + "\\src\\the_vaps_project\\Learning\\positive-words.txt"));
                         while ((ligne = negative_word.readLine()) != null) {
-                            if (mots[i + 1].equalsIgnoreCase(ligne)) {
+                            if (mots.length > i+1 && mots[i + 1].equalsIgnoreCase(ligne)) {
                                 ++nbMotsPositif;
                                 ++score;
                             }
                         }
                         while ((ligne = positive_word.readLine()) != null) {
-                            if (mots[i + 1].equalsIgnoreCase(ligne)) {
+                            if (mots.length > i+1 && mots[i + 1].equalsIgnoreCase(ligne)) {
                                 ++nbMotsNegatifs;
                                 --score;
                             }
