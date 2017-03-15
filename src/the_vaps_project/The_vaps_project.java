@@ -76,6 +76,7 @@ public class The_vaps_project {
                 .setMaxTweets(10)
                 .setUntil("2016-11-08")
                 .setQuerySearch("#NeverTrump");
+      
         /*Scribe s = new Scribe();
         s.detruireFichier("tweets.xml");
         s.ouvrir("tweets.xml");
@@ -84,7 +85,7 @@ public class The_vaps_project {
         for (int i = 0; i < TweetManager.getTweets(criteria).size(); i++) {
             t = TweetManager.getTweets(criteria).get(i);
             s.ecrire("\t<tweet>\n");
-            s.ecrire("\t\t<text>"+t.getText()+"</text>\n");
+            s.ecrire("\t\t<text><![CDATA["+t.getText()+"]]></text>\n");
             s.ecrire("\t\t<hashtags>"+t.getHashtags()+"</hashtags>\n");
             s.ecrire("\t\t<date>"+t.getDate()+"</date>\n");
             s.ecrire("\t\t<username>"+t.getUsername()+"</username>\n");
@@ -101,6 +102,7 @@ public class The_vaps_project {
             corpus.ecrire(s.filtrerTexte(t.getText() + "\n"));
         }
         s.ecrire("</tweets>");
+
         s.fermer();*/
         
         /* SUPER SITE D'EXEMPLES
@@ -278,7 +280,6 @@ public class The_vaps_project {
         
         PreviewJFrame pr = new PreviewJFrame();
         pr.script();*/
-
     }
 
     
