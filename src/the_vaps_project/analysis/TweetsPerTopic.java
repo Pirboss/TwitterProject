@@ -47,7 +47,7 @@ public class TweetsPerTopic {
         Boolean isAlreadyCreated = false;
         
         for(int i=0; i<topics.getLength(); i++){
-            isAlreadyCreated = topics.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(topicName);
+            isAlreadyCreated = isAlreadyCreated || topics.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(topicName);
         }
         
         if (!isAlreadyCreated) {
@@ -58,13 +58,15 @@ public class TweetsPerTopic {
     }
     
     public void addTweet(String topicName, String tweetId) {
-        Element tweet = doc.createElement("tweet");
-        NodeList topics = rootElement.getElementsByTagName("topic");
-        
-        for(int i=0; i<topics.getLength(); i++){
-            if (topics.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(topicName)) {
-                tweet.setAttribute("id", tweetId);
-                topics.item(i).appendChild(tweet);
+        if (!tweetId.equals("")) {
+            Element tweet = doc.createElement("tweet");
+            NodeList topics = rootElement.getElementsByTagName("topic");
+
+            for(int i=0; i<topics.getLength(); i++){
+                if (topics.item(i).getAttributes().getNamedItem("name").getNodeValue().equals(topicName)) {
+                    tweet.setAttribute("id", tweetId);
+                    topics.item(i).appendChild(tweet);
+                }
             }
         }
     }
