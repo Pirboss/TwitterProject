@@ -55,17 +55,20 @@ public class CorpusReader {
 
         try {
             String texte = new String(Files.readAllBytes(path), charset);
-
+            //les urls
             texte = texte.replaceAll("https?://\\S+\\s?", "");
             texte = texte.replaceAll("http?://\\S+\\s?", "");
             texte = texte.replaceAll("pic.twitter\\S+\\s?", "");
+            //les espaces manquants et autre petites choses
             texte = texte.replaceAll("@", " @");
             texte = texte.replaceAll("#", " #");
             texte = texte.replaceAll("'s", "");
             texte = texte.replaceAll("can't", "can not");
             texte = texte.replaceAll("n't", " not");
+            //ça car il y a plein de tweets où il manque un espace après "makeAmericaGreatAgain"
             texte = texte.replaceAll("makeamericagreatagain", "makeamericagreatagain ");
             texte = texte.replaceAll("MakeAmericaGreatAgain", "MakeAmericaGreatAgain ");
+            //pour éviter de créer des espaces superflus
             texte = texte.replaceAll("  ", " ");
 
             Files.write(path, texte.getBytes(charset));

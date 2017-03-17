@@ -42,6 +42,11 @@ public class TweetsPerTopic {
         }
     }
     
+    /**
+     * Ajoute un topic.
+     * Ne fait rien si un topic du même nom est déjà défini.
+     * @param topicName
+    */
     public void addTopic(String topicName) {
         NodeList topics = rootElement.getElementsByTagName("topic");
         Boolean isAlreadyCreated = false;
@@ -57,6 +62,11 @@ public class TweetsPerTopic {
         }
     }
     
+    /**
+     * Ajoute un tweet à un topic qu'on a déjà ajouté au préalable.
+     * @param topicName
+     * @param tweetId 
+     */
     public void addTweet(String topicName, String tweetId) {
         if (!tweetId.equals("")) {
             Element tweet = doc.createElement("tweet");
@@ -71,6 +81,10 @@ public class TweetsPerTopic {
         }
     }
     
+    /**
+     * Crée le fichier tweetsPerTopic.xml
+     * construit à partir des appels de addTopic et addTweet précédent l'appel de cette méthode.
+     */
     public void createFile() {
         try {
             // write the content into xml file
@@ -90,6 +104,6 @@ public class TweetsPerTopic {
         } catch (FileNotFoundException ex) {
             Exceptions.printStackTrace(ex);
         }
-}
+    }
     
 }

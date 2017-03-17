@@ -20,6 +20,12 @@ public class TweetsReader {
     
     private static TweetsPerTopic tpt = new TweetsPerTopic();
     
+    /**
+     * Détermine si un tweet correspond à un thème.
+     * @param text le texte du tweet
+     * @param topicWords la liste des mots du topic
+     * @return True si le texte match le topic
+     */
     public static Boolean topicMatch(String text, List<String> topicWords) {
         Boolean res = false;
         for (String word : topicWords) {
@@ -30,9 +36,7 @@ public class TweetsReader {
     
     public static void main (String args[]) {
         
-        try {
-            
-            
+        try {            
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();            
             DefaultHandler handler = new DefaultHandler() {

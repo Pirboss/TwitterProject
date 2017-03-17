@@ -12,6 +12,9 @@ import the_vaps_project.analysis.TopicsGenerator;
  * @author skander
  */
 public class BestNbTopic {
+    /**
+     * Affiche le meilleur nombre de topic pour le corpus.
+     */
     public static void main (String args[]) {
         TopicsGenerator tg = new TopicsGenerator();
         System.out.println("NbTopic ideal = " + tg.calculNbTopicIdeal());
